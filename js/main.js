@@ -131,20 +131,22 @@ function menu() {
 	})
 }
 
-const swiper = new Swiper('.main__slider', {
-  
-//   slidesPerView: 1, // Кол-во показываемых слайдов
-//   spaceBetween: 0, // Расстояние между слайдами
-//   loop: true, // Бесконечный слайдер
+const mainBg = new Swiper('.main-bg', {
+    effect: 'fade',
+    allowTouchMove: false,
+    fadeEffect: {
+      crossFade: true
+    },
+});
+
+const mainSlider = new Swiper('.main-slider', {
   effect: 'fade',
+  allowTouchMove: false,
   fadeEffect: {
     crossFade: true
   },
-//   freeMode: true, // Слайдеры не зафиксированны
-//   centeredSlides: false, // Размещать слайдеры по центру
-
   autoplay: { // автопрокрутка
-      delay: 1000, // задержка
+      delay: 3000, // задержка
   },
 
 //   breakpoints: {
@@ -159,19 +161,19 @@ const swiper = new Swiper('.main__slider', {
 //     }
 //   },
 
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   navigation: {
-//     nextEl: '.swiper__arrow-next',
-//     prevEl: '.swiper__arrow-prev',
-//   },
-
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
+  pagination: {
+    el: '.main-slider__pagin',
+    type: 'bullets',
+    clickable: true,
+    renderBullet: (index, className) => {
+        return `<span class="${className}"><span>0${index+1}</span></span>`
+    }
+  },
+  thumbs: {
+    swiper: mainBg
+  }
 });
+
 
 // Функции для модальных окон
 modal()

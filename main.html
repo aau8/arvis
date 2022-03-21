@@ -7,10 +7,6 @@
 	<link rel="icon" href="./img/favicon.ico"> <!-- Генератор фавикон - https://realfavicongenerator.net/ -->
 	<title>АРВИС</title>
 	<meta name="description" content="Описание сайта">
-	<link
-	rel="stylesheet"
-	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-  />
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -67,11 +63,11 @@
 					</div>
 				</div>
 			</header>
-			<div class="container">
-				<div class="main__wrap">
-					<div class="main__slider">
+			<div class="main__wrap">
+				<div class="container">
+					<div class="main-slider">
 						<div class="swiper-wrapper">
-							<div class="main-slide swiper-slide">
+							<div class="swiper-slide main-slide">
 								<div class="main-slide__wrap">
 									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
 									<h2 class="main-slide__title">Национальная ассоциация развития вторичного использования сырья</h2>
@@ -82,7 +78,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="main-slide swiper-slide">
+							<div class="swiper-slide main-slide">
 								<div class="main-slide__wrap">
 									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
 									<h2 class="main-slide__title">Национальная сырья</h2>
@@ -93,10 +89,10 @@
 									</button>
 								</div>
 							</div>
-							<div class="main-slide swiper-slide">
+							<div class="swiper-slide main-slide">
 								<div class="main-slide__wrap">
 									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
-									<h2 class="main-slide__title">Использования сырья</h2>
+									<h2 class="main-slide__title">Национальная целью деятельности</h2>
 									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
 									<button class="btn btn_transparent main-slide__btn">
 										<span>Подробнее</span>
@@ -105,26 +101,54 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
-						<!-- <div class="swiper__arrow">
-							<div class="swiper__arrow-next"></div>
-							<div class="swiper__arrow-prev"></div>
-						</div> -->
-					</div>
-					<div class="main__bg">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"></div>
-							<div class="swiper-slide"></div>
-							<div class="swiper-slide"></div>
-						</div>
-
+						<div class="main-slider__pagin"></div>
 					</div>
 					<div class="main__member">
-						
+						<h3 class="main__member-title">Члены АРВИС</h3>
+						<div class="main__member-list">
+							<!-- mm - main member -->
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/cg_company.png" alt=""></div>
+							</div>
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/bsk.png" alt=""></div>
+							</div>
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/rusatom.png" alt=""></div>
+							</div>
+							<a href="#" class="mm-more">
+								<div class="mm-more__content">
+									<p class="mm-more__content-title">Читать подробнее</p>
+									<p class="mm-more__content-text">о преимуществах членства</p>
+								</div>
+								<div class="mm-more__arrow"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="main-bg">
+				<div class="swiper-wrapper">
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main.png" alt=""></div>
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main_2.jpg" alt=""></div>
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main_3.jpeg" alt=""></div>
+				</div>
+			</div>
 		</main>
+
+		<section class="section s-news">
+			<div class="container">
+				<div class="s-news__wrap">
+					<div class="section__header">
+						<h2 class="title_section">Новости <br>ассоциации</h2>
+						<a href="#" class="section-link">
+							<span>Все новости</span>
+							<span class="section-link__icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<section>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea mollitia illum ratione quos reprehenderit, omnis similique necessitatibus, error molestias neque expedita officiis aliquid? Numquam similique temporibus explicabo, nihil porro modi!
@@ -187,10 +211,7 @@
 	</div>
 
 	<!-- Подключение скриптов -->
-	<!-- <script src="./js/libs/swiper-bundle.min.js"></script> -->
-	
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+	<script src="./js/libs/swiper-bundle.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 

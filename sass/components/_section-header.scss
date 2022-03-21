@@ -1,0 +1,23 @@
+.section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-link {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.section-link__icon {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-left: 10px;
+
+    & svg {
+        fill: $main;
+    }
+}

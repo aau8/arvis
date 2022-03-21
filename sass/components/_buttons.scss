@@ -48,12 +48,12 @@ $btn-second-disabled: var(--btn-second-disabled);
     &:hover {
 
         @media (min-width: $minHover) {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.2);
         }
     }
 
     &:active {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -115,6 +115,10 @@ $margin-icon: 2px; // Отступ иконки от текста
     height: 20px;
     margin-left: $margin-icon;
     display: flex;
+
+    & svg {
+        fill: $light;
+    }
 }
 
 // Hover-эффект у ссылки
