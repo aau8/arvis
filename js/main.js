@@ -1,6 +1,5 @@
 
 // Служебные переменные
-const d = document;
 const body = document.querySelector('body');
 
 // Служебные функции
@@ -113,26 +112,21 @@ function sumbitForm() {
 }
 
 // Мобильное меню
-// menu()
+menu()
 function menu() {
 	const burger = find('.burger')
+    const menuClose = find('.menu-close')
 	const menu = find('.menu');
-	
-	// Высота меню
-	window.addEventListener('resize', () => {
-		const headerHeight = find('.header').clientHeight
-
-		if (window.innerWidth <= 768) {
-			menu.style.paddingTop = headerHeight + 'px'
-		}
-		else {
-			menu.style.paddingTop = 0
-		}
-	})
 
 	burger.addEventListener('click', (e) => {
-		burger.classList.toggle('burger_close')
-		menu.classList.toggle('_show')
+		burger.classList.add('_active')
+		menu.classList.add('_show')
+		bodyLock()
+	})
+
+	menuClose.addEventListener('click', (e) => {
+		burger.classList.remove('_active')
+		menu.classList.remove('_show')
 		bodyLock()
 	})
 }

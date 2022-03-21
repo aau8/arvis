@@ -1,11 +1,17 @@
+// Переменные сетки
+$grid-container: 1488px;
+$grid-padding: 0 24px;
+$grid-padding_mobile: 0 16px;
+
+
 .container {
-    max-width: $container;
+    max-width: $grid-container;
     width: 100%;
-    padding: 0 24px;
+    padding: $grid-padding;
     margin: 0 auto;
 
     @media (max-width: $mobile-l) {
-        padding: 0 16px;
+        padding: $grid-padding_mobile;
     }
 }
 
