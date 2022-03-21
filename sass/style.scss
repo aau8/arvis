@@ -21,21 +21,17 @@
 // }
 
 // Стиль скроллбара
-// body::-webkit-scrollbar {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     width: .6em;
-//     height: 100%;
-// }
+body::-webkit-scrollbar {
+    width: 14px;
+}
 
-// body::-webkit-scrollbar-track {
-//     background: #FEF1EB;
-// }
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
 
-// body::-webkit-scrollbar-thumb {
-//     background-color: #CAC1BC;
-// }
+body::-webkit-scrollbar-thumb {
+    background-color: #cecece;
+}
 
 body {
     font-family: $ffMain;
@@ -57,7 +53,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @import '_grid'; // Сетка

@@ -127,6 +127,18 @@ h6 {
   font-weight: inherit;
 }
 
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cecece;
+}
+
 body {
   font-family: var(--ffMain);
   color: var(--main);
@@ -154,7 +166,7 @@ body._lock {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
