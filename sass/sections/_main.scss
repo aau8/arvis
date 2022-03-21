@@ -15,3 +15,56 @@
         background: linear-gradient(359.23deg, rgba(125, 79, 132, 0.6) 0.62%, rgba(62, 87, 133, 0.6) 30.38%, rgba(63, 63, 63, 0) 63.47%);
     }
 }
+
+.main__wrap {
+    margin-top: 136px;
+}
+
+.main__slider {
+
+}
+
+.main-slide {
+    // position: relative;
+    max-width: 615px;
+    // opacity: 0;
+}
+
+.main-slide__wrap {
+
+}
+
+.main-slide__title {
+    font-size: 48px;
+    font-weight: 900;
+    color: $light;
+    line-height: 54px;
+}
+
+.main-slide__text {
+    font-size: 15px;
+    color: $light;
+    line-height: 28px;
+    margin-top: 30px;
+}
+
+.main-slide__btn {
+    width: 208px;
+    margin-top: 40px;
+}
+
+.main-slide__bg-img {
+    position: absolute;
+    top: -48px;
+    left: -67px;
+    width: 82px;
+    height: 56px;
+}
+
+.main__bg {
+
+}
+
+.main__member {
+
+}

@@ -7,7 +7,10 @@
 	<link rel="icon" href="./img/favicon.ico"> <!-- Генератор фавикон - https://realfavicongenerator.net/ -->
 	<title>АРВИС</title>
 	<meta name="description" content="Описание сайта">
-
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -70,10 +73,34 @@
 						<div class="swiper-wrapper">
 							<div class="main-slide swiper-slide">
 								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
 									<h2 class="main-slide__title">Национальная ассоциация развития вторичного использования сырья</h2>
 									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
 									<button class="btn btn_transparent main-slide__btn">
 										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+									</button>
+								</div>
+							</div>
+							<div class="main-slide swiper-slide">
+								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
+									<h2 class="main-slide__title">Национальная сырья</h2>
+									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
+									<button class="btn btn_transparent main-slide__btn">
+										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+									</button>
+								</div>
+							</div>
+							<div class="main-slide swiper-slide">
+								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
+									<h2 class="main-slide__title">Использования сырья</h2>
+									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
+									<button class="btn btn_transparent main-slide__btn">
+										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
 									</button>
 								</div>
 							</div>
@@ -160,7 +187,10 @@
 	</div>
 
 	<!-- Подключение скриптов -->
-	<script src="./js/libs/swiper-bundle.min.js"></script>
+	<!-- <script src="./js/libs/swiper-bundle.min.js"></script> -->
+	
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
 	<script src="./js/main.js"></script>
 </body>
 

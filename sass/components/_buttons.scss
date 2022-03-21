@@ -30,6 +30,9 @@ $btn-second-disabled: var(--btn-second-disabled);
 .btn {
     width: 100%;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     font-weight: 500;
     padding: 9px;
@@ -40,6 +43,18 @@ $btn-second-disabled: var(--btn-second-disabled);
     color: $light;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
+
+    
+    &:hover {
+
+        @media (min-width: $minHover) {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
 }
 
 // Акцентная кнопка
@@ -93,34 +108,13 @@ $btn-second-disabled: var(--btn-second-disabled);
 }
 
 // Кнопка с иконкой. Иконка размещается в html после или перед текстом кнопки
-$margin-icon: 12px; // Отступ иконки от текста
+$margin-icon: 2px; // Отступ иконки от текста
 
 .btn_icon {
+    width: 20px;
+    height: 20px;
+    margin-left: $margin-icon;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-
-    & svg {
-        width: 24px;
-        height: 24px;
-        margin-left: $margin-icon;
-    }
-}
-
-
-// Иконка будет слева. Использовать совместно с btn_icon
-.btn_icon-left {
-
-    & svg {
-        margin-left: 0;
-        margin-right: $margin-icon;
-    }
-}
-
-// Содержимое иконки будет размещаться по центру. Использовать только c btn_icon
-.btn_center {
-    justify-content: center;
 }
 
 // Hover-эффект у ссылки

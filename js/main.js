@@ -131,42 +131,46 @@ function menu() {
 	})
 }
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.main__slider', {
   
-  slidesPerView: 1, // Кол-во показываемых слайдов
-  spaceBetween: 0, // Расстояние между слайдами
-  loop: true, // Бесконечный слайдер
-  freeMode: true, // Слайдеры не зафиксированны
-  centeredSlides: false, // Размещать слайдеры по центру
+//   slidesPerView: 1, // Кол-во показываемых слайдов
+//   spaceBetween: 0, // Расстояние между слайдами
+//   loop: true, // Бесконечный слайдер
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+//   freeMode: true, // Слайдеры не зафиксированны
+//   centeredSlides: false, // Размещать слайдеры по центру
 
   autoplay: { // автопрокрутка
-      delay: 5000, // задержка
+      delay: 1000, // задержка
   },
 
-  breakpoints: {
-    1200: {
+//   breakpoints: {
+//     1200: {
 
-    },
-    700: {
+//     },
+//     700: {
 
-    },
-    400: {
+//     },
+//     400: {
 
-    }
-  },
+//     }
+//   },
 
-  pagination: {
-    el: '.swiper-pagination',
-  },
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
 
-  navigation: {
-    nextEl: '.swiper__arrow-next',
-    prevEl: '.swiper__arrow-prev',
-  },
+//   navigation: {
+//     nextEl: '.swiper__arrow-next',
+//     prevEl: '.swiper__arrow-prev',
+//   },
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
 });
 
 // Функции для модальных окон
