@@ -1,5 +1,15 @@
+// ================ Container Start ================
+$container: 1400px;
+$container-gap: 24px;
+$container-gap-mobile: 16px;
+// ================ Container End ================
+
+@function mwContainer($cw) {
+    @return $cw + ($container-gap * 2);
+}
+
 .container {
-    max-width: $container + ($container-gap * 2);
+    max-width: mwContainer($container);
     width: 100%;
     padding-left: $container-gap;
     padding-right: $container-gap;
@@ -10,4 +20,3 @@
         padding-right: $container-gap-mobile;
     }
 }
-

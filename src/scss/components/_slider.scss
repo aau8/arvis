@@ -1,0 +1,6 @@
+.swiper-slide {
+
+    &:not(:first-child) {
+        opacity: 0;
+    }
+}

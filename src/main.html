@@ -1,22 +1,211 @@
 <!DOCTYPE html>
 <html lang="RU">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="icon" href="./img/favicon.ico">  -->
 	<!-- Генератор фавикон - https://realfavicongenerator.net/ -->
-	<title>Project</title>
-	<meta name="description" content="Description">
-
+	<title>АРВИС</title>
+	<meta name="description" content="Описание сайта">
+	<!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
-
 <body>
 	<div class="wrapper">
-		<header class="header"></header>
-		<main class="main"></main>
-		<div class="content"></div>
+		<main class="main">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrap">
+						<a href="#" class="logo logo_header">
+							<div class="logo__icon">
+								<svg><use href='./img/sprite.svg#logo'></use></svg>
+							</div>
+						</a>
+						<div class="menu">
+							<div class="menu__wrap">
+								<div class="menu__header">
+									<h3 class="menu__header-title">Меню</h3>
+									<button class="menu-close">
+										<span></span>
+										<span></span>
+									</button>
+								</div>
+								<div class="menu__body">
+									<ul class="menu__list">
+										<li class="_current-page"><a href="#">Об ассоциации</a></li>
+										<li><a href="#">Деятельность</a></li>
+										<li><a href="#">Членство</a></li>
+										<li><a href="#">Материалы</a></li>
+										<li><a href="#">Пресс-центр</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+									<div class="header__phone header__phone_menu">
+										<span class="header__phone-text">Центр обращений</span>
+										<a href="tel:+79804000040" class="header__phone-link">+ 7 (980) 400-00-40</a>
+									</div>
+									<div class="header__support header__support_menu">
+										<div class="header__support-img"><img src="./img/ministry_energy.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__phone header__phone_header">
+							<span class="header__phone-text">Центр обращений</span>
+							<a href="tel:+79804000040" class="header__phone-link">+ 7 (980) 400-00-40</a>
+						</div>
+						<div class="header__support header__support_header">
+							<div class="header__support-img"><img src="./img/ministry_energy.png" alt=""></div>
+						</div>
+						<button class="burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<div class="main__wrap">
+				<div class="container">
+					<div class="main-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide main-slide">
+								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
+									<h2 class="main-slide__title">Национальная ассоциация развития вторичного использования сырья</h2>
+									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
+									<button class="btn btn_transparent main-slide__btn">
+										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+									</button>
+								</div>
+							</div>
+							<div class="swiper-slide main-slide">
+								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
+									<h2 class="main-slide__title">Национальная сырья</h2>
+									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
+									<button class="btn btn_transparent main-slide__btn">
+										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+									</button>
+								</div>
+							</div>
+							<div class="swiper-slide main-slide">
+								<div class="main-slide__wrap">
+									<div class="main-slide__bg-img"><svg><use href='./img/sprite.svg#main_b'></use></svg></div>
+									<h2 class="main-slide__title">Национальная целью деятельности</h2>
+									<p class="main-slide__text">Основной целью деятельности Национальной ассоциации развития вторичного использования сырья является повышение объемов утилизации промышленных отходов</p>
+									<button class="btn btn_transparent main-slide__btn">
+										<span>Подробнее</span>
+										<span class="btn_icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-slider__pagin"></div>
+					</div>
+					<div class="main__member">
+						<h3 class="main__member-title">Члены АРВИС</h3>
+						<div class="main__member-list">
+							<!-- mm - main member -->
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/cg_company.png" alt=""></div>
+							</div>
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/bsk.png" alt=""></div>
+							</div>
+							<div class="mm-card">
+								<div class="mm-card__img"><img src="./img/member_arvis/rusatom.png" alt=""></div>
+							</div>
+							<a href="#" class="mm-more">
+								<div class="mm-more__content">
+									<p class="mm-more__content-title">Читать подробнее</p>
+									<p class="mm-more__content-text">о преимуществах членства</p>
+								</div>
+								<div class="mm-more__arrow"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-bg">
+				<div class="swiper-wrapper">
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main.png" alt=""></div>
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main_2.jpg" alt=""></div>
+					<div class="main-bg__slide swiper-slide"><img src="./img/main_images/main_3.jpeg" alt=""></div>
+				</div>
+			</div>
+		</main>
+		<div class="content">
+			<section class="section s-news">
+				<div class="container">
+					<div class="s-news__wrap">
+						<div class="section__header">
+							<h2 class="title_section">Новости <br>ассоциации</h2>
+							<a href="#" class="section-link">
+								<span>Все новости</span>
+								<span class="section-link__icon"><svg><use href='./img/sprite.svg#arrow_triangle'></use></svg></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+	
+			
+		</div>
 		<footer class="footer"></footer>
 	</div>
+
+	<!-- Модальные окна -->
+	<!-- <div class="modal" id="callback">
+		<div class="modal__body">
+			<div class="modal__content">
+				<h2 class="modal__title">Обратный звонок</h2>
+				<form action="#" method="POST" class="form modal__form" id="modal__form">
+					<div class="form-elem">
+						<input class="form-elem__area _required" type="text" id="user_name" name="name" placeholder=" ">
+						<label class="form-elem__label" for="name">Имя</label>
+					</div>
+					<div class="form-elem">
+						<input class="form-elem__area _required" type="tel" id="user_phone" name="phone"
+							placeholder=" ">
+						<label class="form-elem__label" for="phone">Номер телефона</label>
+					</div>
+					<div class="form-elem">
+						<input class="form-elem__area _required" type="email" id="user_email" name="email"
+							placeholder=" ">
+						<label class="form-elem__label" for="email">E-mail</label>
+					</div>
+					<div class="form-elem">
+						<input class="form-elem__area" type="text" id="user_company" name="company" placeholder=" ">
+						<label class="form-elem__label" for="company">Название вашей компании</label>
+					</div>
+					<div class="form-elem">
+						<input class="form-elem__area" type="text" id="user_working_pos" name="working_pos"
+							placeholder=" ">
+						<label class="form-elem__label" for="working_pos">Ваша должность</label>
+					</div>
+					<div class="form-elem">
+						<textarea class="form-elem__area" type="text" id="user_message" name="message"
+							placeholder=" "></textarea>
+						<label class="form-elem__label" for="message">Комментарий</label>
+					</div>
+					<span class="modal__attention">Нажав на кнопку, вы соглашаетесь с обработкой персональных
+						данных.</span>
+					<button class="btn modal__submit" type="submit">Проконсультироваться</button>
+				</form>
+				<button class="modal__close">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Подключение скриптов -->
+	<!-- <script src="./js/libs/swiper-bundle.min.js"></script> -->
+	<!-- <script src="./js/main.js"></script> -->
 </body>
 
 </html>

@@ -11,6 +11,9 @@ const __dirname = dirname(__filename)
 const src = __dirname + '/src'
 const PAGES = fs.readdirSync(src).filter(file => file.includes('.html')) // Массив с названиями файлов в папке src с расширением html
 
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = !isProd
+
 export default {
   entry: './src/js/index.js',
   output: {
@@ -18,7 +21,7 @@ export default {
     filename: 'js/bundle.js',
   },
   devServer: {
-    port: 3000, // Порт сервера
+    port: 'auto', // Порт сервера
     open: true, // Открывает бразуер после запуска сервера
     compress: true, // Включает сжатие gzip для более быстрой загрузки страниц
     hot: false, // Обновление страницы после изменений, без перезагрузки
@@ -35,7 +38,22 @@ export default {
       template: `./src/${page}`, // Где находится файл
       filename: `./${page}`, // Название файла
       inject: page === 'index.html' ? false : 'body', // Все скрипты помещаются внизу body, кроме страницы index.html
-      minify: false,
+      // minify: isDev ? false : {
+      //   caseSensitive: false,
+      //   removeComments: true,
+      //   collapseWhitespace: false,
+      //   removeRedundantAttributes: true,
+      //   useShortDoctype: true,
+      //   removeEmptyAttributes: true,
+      //   removeStyleLinkTypeAttributes: true,
+      //   removeScriptTypeAttributes: true,
+      //   keepClosingSlash: false,
+      //   minifyJS: { compress: { conditionals: false }},
+      //   minifyCSS: true,
+      //   minifyURLs: true,
+      //   sortAttributes: true,
+      //   sortClassName: true,
+      // }
     })),
     // Очищаем папку dist
     new CleanWebpackPlugin(),

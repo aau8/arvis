@@ -1,0 +1,290 @@
+.main {
+    position: relative;
+    // max-height: 980px;
+    // height: 100%;
+    height: 980px;
+    // background: center/cover no-repeat url(../img/main_images/main.png);
+}
+
+.main__wrap {
+    position: relative;
+    padding-top: 136px;
+}
+
+.main__slider {
+
+}
+
+.main-slide {
+    // position: relative;
+    // max-width: 615px;
+    // opacity: 0;
+    pointer-events: none;
+
+    &.swiper-slide-active {
+        pointer-events: all;
+
+        & .main-slide__title {
+            animation: msShowLeft .3s ease-in-out forwards;
+        }
+
+        & .main-slide__text {
+            animation: msShowLeft .3s ease-in-out .1s forwards;
+        }
+
+        & .main-slide__btn {
+            animation: msShowLeft .3s ease-in-out .2s forwards;
+        }
+
+        & .main-slide__bg-img {
+            animation: msShowBgImg .4s ease-in-out 0s forwards;
+        }
+    }
+}
+
+@keyframes msShowBgImg {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes msShowLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-slide__wrap {
+    max-width: 615px;
+}
+
+.main-slide__title {
+    font-size: 48px;
+    font-weight: 900;
+    color: $text-light;
+    line-height: 54px;
+    opacity: 0;
+}
+
+.main-slide__text {
+    font-size: 15px;
+    color: $text-light;
+    line-height: 28px;
+    margin-top: 30px;
+    opacity: 0;
+}
+
+.main-slide__btn {
+    width: 208px;
+    margin-top: 40px;
+    opacity: 0;
+}
+
+.main-slide__bg-img {
+    position: absolute;
+    top: -48px;
+    left: -67px;
+    width: 82px;
+    height: 56px;
+    opacity: 0;
+}
+
+// Пагинация слайдера
+.main-slider__pagin {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -111px;
+    transform: translateY(-50%);
+    width: 418px;
+    height: 418px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.14);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(167.64deg, rgba(255, 255, 255, 0.08) 8.99%, rgba(255, 255, 255, 0) 90.51%);
+        border-radius: 50%;
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.14);
+    }
+
+    & .swiper-pagination-bullet {
+        position: relative;
+        z-index: 1;
+        width: 4px;
+        height: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $radius-round;
+        background-color: #fff;
+        margin: 0 10px;
+        transition: $tr;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500%;
+            height: 500%;
+            opacity: 0;
+        }
+
+        & span {
+            font-size: 42px;
+            font-weight: 500;
+            color: #fff;
+            transform: scale(0);
+            transition: .5s;
+        }
+
+        &.swiper-pagination-bullet-active {
+            background-color: transparent;
+            margin: 0 40px;
+            pointer-events: none;
+            
+            & span {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+// Задний фон
+.main-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.main-bg__slide {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(359.23deg, rgba(125, 79, 132, 0.6) 0.62%, rgba(62, 87, 133, 0.6) 30.38%, rgba(63, 63, 63, 0) 63.47%);
+    }
+    
+    & img {
+        object-fit: cover;
+    }
+}
+
+// Члены АРВИС... Другие члены =)
+.main__member {
+    margin-top: 86px;
+}
+.main__member-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.main__member-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 340px)) minmax(min-content, 270px);
+    column-gap: 38px;
+    margin-top: 24px;
+}
+
+// Карточка "Члена АРВИС"
+.mm-card {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    padding: 0 24px;
+}
+
+.mm-card__img {
+    max-width: 180px;
+}
+
+// Карточка "Читать подробнее"
+.mm-more {
+    height: 120px;
+    display: flex;
+    align-items: center;    
+    
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            & .mm-more__arrow {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    &:active {
+        & .mm-more__arrow {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.mm-more__content {
+    // display: flex;
+    // flex-direction: column;
+    color: $text-light;
+}
+
+.mm-more__content-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mm-more__content-text {
+    font-size: 12px;
+}
+
+.mm-more__arrow {
+    height: 100%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    margin-left: 32px;
+    transition: $tr;
+
+    & svg {
+        width: 24px;
+        height: 24px;
+        fill: $text-light;
+    }
+}

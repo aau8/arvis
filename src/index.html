@@ -5,10 +5,11 @@
     <title>Каталог ссылок</title>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ссылки на страницы</title>
     <style>
         * {
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: serif;
         }
 
         .container {
@@ -70,7 +71,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ссылки на страницы <span></span></h1>
+        <h1>Ссылки на страницы </h1>
 
         <h2>Страницы для общего доступа</h2>
         <table>
@@ -82,34 +83,24 @@
     </div>
 
     <script>
-        const titleProject = 'Без названия'
         const trElems = document.querySelectorAll('table tr')
 
-        // Вставляем название проекта
-        const title = document.querySelector('h1')
-        const titleSpan = title.querySelector('span')
-
-        titleSpan.innerText = `"${titleProject}"`
-        titleSpan.style.color = titleProject === "Без названия" ? 'red' : 'initial'
-
-        // Генерируем ссылки
         for (let i = 0; i < trElems.length; i++) {
             const tr = trElems[i];
             const trTitle = tr.querySelectorAll('td')[0]
             const trLink = tr.querySelectorAll('td')[1]
+            // const url = 'https://topverstka.github.io/enrollee/catalog/' + trLink.innerText
             const url = trLink.innerText
 
             trTitle.setAttribute('title', trTitle.innerText)
             trLink.innerHTML = `<a href="${url}">${url}<br></a>`
 
             // Создание ссылки на валидатор
-            if (titleProject != 'Без названия') {
-                const valid = document.createElement('td')
-                valid.classList.add('validator')
-                valid.innerHTML = `<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fartemyg0811.github.io%2F${titleProject.toLowerCase()}%2Fdist%2F${url}" target="_blank"><img src="https://validator.w3.org/images/w3c.png" alt="Validator" title="Validator"></a>`
-                
-                tr.append(valid)
-            }
+            const valid = document.createElement('td')
+            valid.classList.add('validator')
+            valid.innerHTML = `<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ftopverstka.github.io%2FFIGROUP%2F${url}"><img src="https://validator.w3.org/images/w3c.png" alt="Validator" title="Validator"></a>`
+            
+            tr.append(valid)
         }
     </script>
 </body>
