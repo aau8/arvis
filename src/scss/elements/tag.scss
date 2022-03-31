@@ -1,0 +1,29 @@
+$tag-blue: rgba(82, 114, 255, 0.6);
+$tag-purple: rgba(166, 75, 137, 0.6);
+
+.tag {
+    display: inline-block;
+    color: $text-light;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: lhperc(13, 20);
+    background: transparent;
+    padding: 1em 1.8em;
+
+    &_blue {
+        background: $tag-blue;
+    }
+
+    &_purple {
+        background: $tag-purple;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+        line-height: lhperc(12, 20);
+        padding: .8em 1.5em;
+    }
+}
+
+.tab_blue {
+}

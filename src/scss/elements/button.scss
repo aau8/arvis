@@ -37,7 +37,47 @@
     }
 }
 
-.btn_icon {
+.btn_outline {
+    color: $accent;
+    border: 1px solid $accent;
+    
+    &:hover {
+
+        @media (min-width: $min-hover) {
+            color: $light;
+            background: $accent;
+
+            & .btn__icon {
+        
+                & svg {
+                    fill: $light;
+                }
+            }
+        }
+    }
+
+    &:active {
+        color: $light;
+        background: adjust-color($accent, $alpha: -.3);
+        border-color: adjust-color($accent, $alpha: -.3);
+
+        & .btn__icon {
+    
+            & svg {
+                fill: $light;
+            }
+        }
+    }
+
+    & .btn__icon {
+
+        & svg {
+            fill: $accent;
+        }
+    }
+}
+
+.btn__icon {
     width: 20px;
     height: 20px;
     margin-left: 2px;
@@ -45,5 +85,94 @@
 
     & svg {
         fill: $text-light;
+        transition: $tr;
+    }
+}
+
+// Ссылки
+.link {
+    
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            // color: $accent-hover;
+        }
+    }
+
+    &:active {
+        // color: $accent-active;
+    }
+}
+
+.link-section {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: right;
+    margin: 10px 0;
+
+    &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.25 0.5L5.75 4L2.25 7.5' stroke='%232A2A2A' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        margin-left: 8px;
+        transition: $tr;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            &::after {
+                transform: translate(2px, 0);
+            }
+        }
+    }
+}
+
+.link-more {
+    display: flex;
+    font-size: 13px;
+    font-weight: 500;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
+
+    & span {
+
+        &:nth-child(2) {
+            margin-left: 14px;
+
+            @media (max-width: $mobile-l) {
+                margin-left: 8px;
+            }
+        }
+
+        & svg {
+            width: 22px;
+            height: 22px;
+            fill: $accent;
+
+            @media (max-width: $mobile-l) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &_light {
+        color: $light;
+
+        & span {
+
+            svg {
+                fill: $light;
+            }
+        }
     }
 }

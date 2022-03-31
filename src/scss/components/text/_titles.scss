@@ -1,4 +1,13 @@
 .title_section {
     font-size: 30px;
     font-weight: 700;
+
+    @media (max-width: $tablet) {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 22px;
+    }
 }

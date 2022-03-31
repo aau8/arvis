@@ -1,3 +1,6 @@
+/* Идеи для миксинов и функций
+* Вывод похожих шрифтов на основании семейства sans или sans-serif
+*/
 @function findLightColor($color, $l: 96%) {
     @if type-of($color) == 'color' {
         @if lightness($color) > 96% {
@@ -6,6 +9,10 @@
         @return change-color($color, $lightness: $l);
     }
     @return $background;
+}
+
+@function lhperc($font-size, $line-height-px) {
+    @return round($line-height-px / $font-size * 10) / 10;
 }
 
 // Стиль скроллбара

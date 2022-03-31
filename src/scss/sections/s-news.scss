@@ -1,0 +1,57 @@
+.s-news {
+
+}
+
+.s-news__wrap {
+
+}
+
+.s-news__body {
+    position: relative;
+}
+
+.s-news__slider {
+
+}
+
+.s-news__slide {
+
+}
+
+// Геометрические фигуры
+.s-news__decor {
+    pointer-events: none;
+}
+
+.n-news__decor-rect-top {
+    position: absolute;
+    top: 7px;
+    left: -30px;
+    width: 142px;
+    height: 108px;
+}
+
+.n-news__decor-bullets-top {
+    position: absolute;
+    top: 8px;
+    left: 263px;
+    width: 238px;
+    height: 30px;
+}
+
+.n-news__decor-bullets-bottom-left {
+    position: absolute;
+    bottom: -30px;
+    left: -64px;
+    width: 134px;
+    height: 82px;
+
+}
+
+.n-news__decor-bullets-bottom-right {
+    position: absolute;
+    bottom: -27px;
+    right: -48px;
+    width: 82px;
+    height: 56px;
+}

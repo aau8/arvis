@@ -89,7 +89,7 @@ export default {
         },
         // Шрифты
         {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
+          test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/i,
           type: 'asset/resource',
           generator: {
             filename: content => {

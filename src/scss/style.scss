@@ -47,6 +47,7 @@ body {
 // Елементы
 @import './elements/button';
 @import './elements/logo';
+@import './elements/tag';
 
 // Компоненты
 // @import './components/_forms';
@@ -54,6 +55,8 @@ body {
 @import './components/section';
 @import './components/slider';
 // @import './components/buttons';
+
+@import './components/cards/n-card';
  
 // Текстовые компоненты
 @import './components/text/_text';
@@ -64,4 +67,6 @@ body {
 @import './sections/menu';
 @import './sections/_main';
 @import './sections/s-news';
+@import './sections/s-event';
+@import './sections/s-case';
 @import './sections/_footer';

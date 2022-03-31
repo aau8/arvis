@@ -9,4 +9,19 @@
     }
 }
 
-// @include font('Roboto', normal, 300, '../fonts/Roboto/Roboto-Light.woff2');
+// Gotham
+@include font('Gotham', normal, 400, '../fonts/Gotham/Gotham-Book.woff2');
+@include font('Gotham', normal, 500, '../fonts/Gotham/Gotham-Medium.woff2');
+@include font('Gotham', normal, 700, '../fonts/Gotham/Gotham-Bold.woff2');
+@include font('Gotham', normal, 900, '../fonts/Gotham/Gotham-Black.woff2');
+
+// Cera Pro
+@include font('Cera Pro', normal, 400, '../fonts/CeraPro/Cera-Pro-Regular.woff2');
+@include font('Cera Pro', normal, 500, '../fonts/CeraPro/Cera-Pro-Medium.woff2');
+@include font('Cera Pro', normal, 700, '../fonts/CeraPro/Cera-Pro-Bold.woff2');
+
+// Days One
+@include font('Days One', normal, 400, '../fonts/DaysOne/DaysOne-Regular.woff2');
+
+// Proxima Nova
+@include font('Proxima Nova', normal, 600, '../fonts/ProximaNova/proxima-nova-semibold.woff2');

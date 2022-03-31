@@ -1,0 +1,143 @@
+.s-case {
+
+}
+
+.s-case__wrap {
+
+}
+
+.s-case__body {
+    position: relative;
+    display: flex;
+}
+
+.sc-images__slider-container {
+    height: 100%;
+}
+
+.sc-images__slider {
+    max-width: 554px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.sci-slide {
+    position: relative;
+    width: 100%;
+}
+
+.sci-slide__img {
+    width: 100%;
+    height: 382px;
+
+    & img {
+        object-fit: cover;
+    }
+}
+
+.sci-slide__tag {
+    position: absolute;
+    top: 32px;
+    left: 0;
+}
+
+.sci-pagination {
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+
+    & .swiper-pagination-bullet {
+        position: relative;
+        width: 28px;
+        height: 3px;
+        display: block;
+        border-radius: 20px;
+        background: adjust-color($accent, $alpha: -.8);
+        transition: $tr;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 500%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &-active {
+            background: $accent;
+        }
+    }
+}
+
+.s-case__arrow {
+
+}
+
+.s-case__arrow_prev {
+
+}
+
+.s-case__arrow_next {
+
+}
+
+.sc-content__slider {
+    max-width: 784px;
+    padding: 58px 80px 46px;
+    background: $light;
+    box-shadow: $shadow-card;
+    margin-left: 62px;
+}
+
+.scc-slide {
+    // display: flex;
+    // flex-direction: column;
+}
+
+.scc-slide__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: lhperc(22, 30);
+    margin-bottom: 32px;
+}
+
+.scc-slide__list {
+    margin: 22px 0;
+}
+
+.scc-slide__item {
+    font-size: 13px;
+    line-height: lhperc(13, 26);
+}
+
+.scc-slide__item-title {
+
+}
+
+.scc-slide__item-text {
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.scc-slide__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: lhperc(14, 28);
+    margin: 10px 0;
+}
+
+.scc-slide__more {
+    max-width: 254px;
+    margin-top: 50px;
+}
