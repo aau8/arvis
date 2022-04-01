@@ -1,43 +1,42 @@
-// // Высота линий в разделе этапов на главной странице
-// if (document.querySelector('.s-steps')) {
-//     const ssLineDefault = document.querySelector('.s-steps__line_default')
-//     const ssLineActive = document.querySelector('.s-steps__line_active')
-//     const lineContainer = document.querySelector('.s-steps__column-center')
-//     const lineContainerHeight = lineContainer.clientHeight
-    
-//     heightToLine(ssLineDefault, lineContainerHeight)
-//     heightToLine(ssLineActive, lineContainerHeight)
-// }
+// import { getSiblings } from './util/functions.js'
 
-// export function heightToLine(line, height) {
-//     const lineSVG = line.querySelector('svg')
-//     const lineSVGLine = lineSVG.querySelector('line')
-    
-//     lineSVG.setAttribute('viewBox', `0 0 2 ${height}`)
-//     lineSVGLine.setAttribute('y2', height)
-// }
+// // Ползунок в меню
+// window.addEventListener('load', e => {
+//     const menu = document.querySelector('.menu__list')
+//     const roller = menu.querySelector('.menu__roller')
+//     const menuItemElems = menu.querySelectorAll('li')
+//     const menuItemActive = menu.querySelector('._current-page')
 
-// // Кастомный курсор в разделе Другие функции на страницах функций
-// if (document.querySelector('.mf-card__custom-cursor') && window.innerWidth > 768) {
-//     const cursorCardElems = document.querySelectorAll('.mf-card')
-    
-//     for (let i = 0; i < cursorCardElems.length; i++) {
-//         const cursorCard = cursorCardElems[i];
-//         const cursor = cursorCard.querySelector('.mf-card__custom-cursor')
+//     const itemPosLeft = menuItemActive.getBoundingClientRect().left - menu.getBoundingClientRect().left
+//     const itemWidth = menuItemActive.clientWidth
+
+//     roller.style.left = itemPosLeft + 'px'
+//     roller.style.width = itemWidth + 'px'
+//     console.log(menuItemElems[1].getBoundingClientRect().left - menu.getBoundingClientRect().left)
+
+//     for (let i = 0; i < menuItemElems.length; i++) {
+//         const menuItem = menuItemElems[i];
         
-//         document.addEventListener('mousemove', e => {
-//             const x = e.clientX
-//             const y = e.clientY
-//             const cardX = cursorCard.getBoundingClientRect().x
-//             const cardY = cursorCard.getBoundingClientRect().y
+//         menuItem.addEventListener('mousemove', e => {
+//             const siblingItems = getSiblings(menuItem)
 
-//             cursor.style.opacity = 1
-//             cursor.style.left = x - cardX + 'px'
-//             cursor.style.top = y - cardY + 'px'
+//             console.log('ok')
+//             menuItem.style.opacity = 1
+
+//             for (let i = 0; i < siblingItems.length; i++) {
+//                 const item = siblingItems[i];
+                
+//                 item.style.opacity = .5
+//             }
 //         })
 
-//         document.addEventListener('mouseout', e => {
-//             cursor.style.opacity = 0
+//         menuItem.addEventListener('mouseleave', e => {
+
+//             for (let i = 0; i < menuItemElems.length; i++) {
+//                 const menuItem = menuItemElems[i];
+                
+//                 menuItem.style.opacity = 1
+//             }
 //         })
 //     }
-// }
+// })
