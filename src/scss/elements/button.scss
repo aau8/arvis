@@ -105,6 +105,7 @@
         width: 40%;
         height: 40%;
         fill: $light;
+        transition: $tr;
     }
 
     &_facebook {
@@ -123,20 +124,56 @@
         width: 32px;
         height: 32px;
     }
-}
 
-// Ссылки
-.link {
-    
     &:hover {
         
         @media (min-width: $min-hover) {
-            // color: $accent-hover;
+            
+            & svg {
+                transform: scale(1.15);
+            }
         }
     }
 
     &:active {
-        // color: $accent-active;
+
+        & svg {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Ссылки
+.link {
+    position: relative;
+
+    &:hover {
+                
+        @media (min-width: $min-hover) {
+            
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:active {
+        color: $light;
+
+        &::before {
+            border-color: $light;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid $item-light;
+        opacity: 0;
+        transition: $tr;
     }
 }
 
@@ -148,25 +185,50 @@
     line-height: 1.2;
     text-align: right;
     margin: 10px 0;
+    transition: $tr;
 
-    &::after {
-        content: '';
-        width: 8px;
-        height: 8px;
-        display: inline-block;
-        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.25 0.5L5.75 4L2.25 7.5' stroke='%232A2A2A' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        margin-left: 8px;
-        transition: $tr;
+    & span {
+
+        &:last-child {
+            margin-left: 8px;
+        }
     }
 
     &:hover {
         
         @media (min-width: $min-hover) {
+            color: $accent;
             
-            &::after {
+            & .link-section__icon {
                 transform: translate(2px, 0);
+                
+                & svg {
+                    stroke: $accent;
+                }
             }
         }
+    }
+
+    &:active {
+        color: adjust-color($accent, $alpha: -.2);
+        
+        & .link-section__icon {
+            
+            & svg {
+                stroke: adjust-color($accent, $alpha: -.2);
+            }
+        }
+    }
+}
+
+.link-section__icon {
+    width: 8px;
+    height: 8px;
+    display: block;
+    transition: $tr;
+
+    & svg {
+        stroke: $text-dark;
     }
 }
 

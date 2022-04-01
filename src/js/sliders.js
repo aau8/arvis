@@ -37,6 +37,16 @@ const mainSlider = new Swiper('.main-slider', {
   },
   thumbs: {
     swiper: mainBg
+  },
+  on: {
+    init: swiper => {
+      const bulletsContainer = swiper.el.querySelector('.main-slider__pagin')
+      const bullets = swiper.pagination.bullets.length
+
+      if (bullets > 1) {
+        bulletsContainer.classList.add('_show')
+      }
+    }
   }
 });
 
