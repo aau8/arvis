@@ -49,14 +49,37 @@
 }
 
 .header__phone-link {
+    position: relative;
     font-size: 13px;
+    font-weight: 500;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 0.6px dashed $light;
+        opacity: 0;
+        transition: $tr;
+    }
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .header__support {
     max-width: 144px;
     margin: 0;
 
-    @media (max-width: 1200px) {
+    @media (max-width: mwContainer($container)) {
         max-width: 100px;
     }
 

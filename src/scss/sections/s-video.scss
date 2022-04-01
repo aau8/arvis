@@ -1,0 +1,44 @@
+
+
+// Декор
+.sv-decor {
+    pointer-events: none;
+}
+
+.sv-decor__rect-top-left {
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    left: 248px;
+    width: 159px;
+    height: 127px;
+
+}
+
+.sv-decor__rect-top-right {
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    left: 1105px;
+    width: 159px;
+    height: 127px;
+}
+
+.sv-decor__rect-center {
+    position: absolute;
+    z-index: -1;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 159px;
+    height: 127px;
+}
+
+.sv-decor__bullet-top {
+    position: absolute;
+    z-index: -1;
+    top: -13px;
+    left: 924px;
+    width: 134px;
+    height: 56px;
+}

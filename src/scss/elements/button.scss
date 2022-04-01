@@ -17,6 +17,10 @@
     font-weight: 500;
     padding: 9px;
     transition: $tr;
+
+    @media (max-width: $mobile-l) {
+        height: 40px;
+    }
 }
 
 .btn_transparent {
@@ -86,6 +90,38 @@
     & svg {
         fill: $text-light;
         transition: $tr;
+    }
+}
+
+.btn-social {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+
+    & svg {
+        width: 40%;
+        height: 40%;
+        fill: $light;
+    }
+
+    &_facebook {
+        border-color: $facebook-color;
+    }
+
+    &_telegram {
+        border-color: $telegram-color;
+    }
+
+    &_youtube {
+        border-color: $youtube-color;
+    }
+
+    @media (max-width: $mobile-l) {
+        width: 32px;
+        height: 32px;
     }
 }
 

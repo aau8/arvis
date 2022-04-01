@@ -8,18 +8,81 @@
 
 .s-case__body {
     position: relative;
+    width: 100%;
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+
+    & .swiper-container {
+        width: 100%;
+    }
 }
 
 .sc-images__slider-container {
     height: 100%;
 }
 
+.sc-content__slider-container {
+    margin-left: 62px;
+
+    @media (max-width: 1200px) {
+        margin-left: 40px;
+
+    }
+
+    @media (max-width: $tablet) {
+        margin: 32px 0 0 0;
+    }
+}
+
 .sc-images__slider {
     max-width: 554px;
     width: 100%;
+    height: 382px;
     padding: 0;
     margin: 0;
+    
+    @media (max-width: mwContainer($container)) {
+        
+    }
+    
+    @media (max-width: mwContainer($container-step-1)) {
+        width: 37vw;
+    }
+
+    @media (max-width: $laptop) {
+        height: 280px;
+    }
+
+    @media (max-width: $tablet) {
+        max-width: none;
+        width: 100%;
+        height: 382px;
+    }
+
+    @media (max-width: $mobile-l) {
+        height: 280px;
+    }
+}
+
+.sc-images__arrows {
+
+    @media (max-width: $laptop) {
+        transform: translate(-50%, 124%);
+    }
+
+    @media (max-width: $tablet) {
+        top: 333px;
+        bottom: auto;
+    }
+
+    @media (max-width: $mobile-l) {
+        top: 248px;
+    }
 }
 
 .sci-slide {
@@ -29,7 +92,7 @@
 
 .sci-slide__img {
     width: 100%;
-    height: 382px;
+    height: 100%;
 
     & img {
         object-fit: cover;
@@ -72,11 +135,24 @@
 
         &:not(:last-child) {
             margin-right: 20px;
+
+            @media (max-width: $mobile-l) {
+                margin-right: 12px;
+            }
         }
 
         &-active {
             background: $accent;
         }
+
+        @media (max-width: $mobile-l) {
+            width: 20px;
+            
+        }
+    }
+
+    @media (max-width: $tablet) {
+        bottom: -24px;
     }
 }
 
@@ -94,10 +170,30 @@
 
 .sc-content__slider {
     max-width: 784px;
+    width: 100%;
     padding: 58px 80px 46px;
     background: $light;
     box-shadow: $shadow-card;
-    margin-left: 62px;
+    
+    @media (max-width: mwContainer($container)) {
+        width: 584px;
+    }
+
+    @media (max-width: mwContainer($container-step-1)) {
+        width: 50vw;
+    }
+
+    @media (max-width: $laptop) {
+        padding: 48px 32px;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 32px 24px;
+    }
 }
 
 .scc-slide {
@@ -140,4 +236,9 @@
 .scc-slide__more {
     max-width: 254px;
     margin-top: 50px;
+
+    @media (max-width: $mobile-l) {
+        max-width: 200px;
+        margin-top: 32px;
+    }
 }

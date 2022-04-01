@@ -57,6 +57,7 @@ body {
 // @import './components/buttons';
 
 @import './components/cards/n-card';
+@import './components/cards/sv-card';
  
 // Текстовые компоненты
 @import './components/text/_text';
@@ -69,4 +70,5 @@ body {
 @import './sections/s-news';
 @import './sections/s-event';
 @import './sections/s-case';
+@import './sections/s-video';
 @import './sections/_footer';

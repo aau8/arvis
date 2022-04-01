@@ -16,6 +16,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 32px;
+    }
 }
 
 // .section-link {

@@ -1,5 +1,6 @@
 // ================ Container Start ================
 $container: 1400px;
+$container-step-1: 1200px;
 $container-gap: 24px;
 $container-gap-mobile: 16px;
 // ================ Container End ================
@@ -14,6 +15,10 @@ $container-gap-mobile: 16px;
     padding-left: $container-gap;
     padding-right: $container-gap;
     margin: 0 auto;
+
+    @media (max-width: mwContainer($container)) {
+        max-width: mwContainer($container-step-1);
+    }
 
     @media (max-width: $mobile-l) {
         padding-left: $container-gap-mobile;

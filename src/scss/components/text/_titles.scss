@@ -11,3 +11,10 @@
         font-size: 22px;
     }
 }
+
+.title_footer {
+    // font-size: 18px;
+    font-weight: 500;
+    line-height: lhperc(18, 24);
+    color: $title-light;
+}
