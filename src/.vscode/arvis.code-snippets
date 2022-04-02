@@ -1,0 +1,17 @@
+{
+	// Place your Рабочая область src snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Шапка раздела": {
+		"scope": "html",
+		"prefix": "_c-section-header",
+		"body": [
+			"<div class=\"section__header\">\n\t<h2 class=\"title_section\">Кейс дня</h2>\n\t<a href=\"#\" class=\"link-section\">\n\t\t<span>Все кейсы</span>\n\t\t<span class=\"link-section__icon\"><svg><use href='./img/sprite.svg#arrow-linear'></use></svg></span>\n\t</a>\n</div>"
+		],
+		"description": ""
+	}
+}

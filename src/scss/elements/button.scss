@@ -145,6 +145,20 @@
 
 // Ссылки
 .link {
+
+    &:hover {
+                
+        @media (min-width: $min-hover) {
+            color: $accent;
+        }
+    }
+
+    &:active {
+        color: adjust-color($accent, $alpha: -.3);
+    }
+}
+
+.link-light {
     position: relative;
 
     &:hover {

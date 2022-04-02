@@ -2,6 +2,7 @@
 @import '_fonts'; // Шрифты
 @import '_vars'; // Переменные
 @import '_reset'; // Сброс css
+@import '_grid'; // Сетка
 
 
 // Общие стили для страниц
@@ -39,7 +40,42 @@ body {
     }
 }
 
-@import '_grid'; // Сетка
+.content-with-sidebar {
+    display: flex;
+    padding-top: 50px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        padding-top: 0;
+    }
+}
+
+.info {
+    width: 100%;
+    margin-left: 68px;
+    margin-bottom: 100px;
+
+    @media (max-width: mwContainer($container)) {
+        margin-left: 50px;
+    }
+
+    @media (max-width: $laptop) {
+        margin-left: 32px;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: $tablet) {
+        margin: 32px 0 0 0;
+        margin-bottom: 50px;
+    }
+
+    & > section {
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+}
 
 // Анимация
 @import './_animation';
@@ -54,10 +90,13 @@ body {
 // @import './components/_modal';
 @import './components/section';
 @import './components/slider';
+@import './components/breadcrumbs';
+@import './components/sidebar';
 // @import './components/buttons';
 
 @import './components/cards/n-card';
 @import './components/cards/sv-card';
+@import './components/cards/struct-card';
  
 // Текстовые компоненты
 @import './components/text/_text';
@@ -72,3 +111,6 @@ body {
 @import './sections/s-case';
 @import './sections/s-video';
 @import './sections/_footer';
+
+// Страница структуры
+@import './sections/s-struct';
