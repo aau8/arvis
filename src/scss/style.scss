@@ -104,6 +104,8 @@ body {
 @import './components/cards/n-card';
 @import './components/cards/sv-card';
 @import './components/cards/struct-card';
+@import './components/cards/sp-card';
+@import './components/cards/spr-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -132,3 +134,9 @@ body {
 @import './sections/s-organs';
 @import './sections/s-assist';
 @import './sections/s-effect';
+
+// Страница "Партнеры"
+@import './sections/s-partners';
+
+// Страница "Проекты"
+@import './sections/s-projects';

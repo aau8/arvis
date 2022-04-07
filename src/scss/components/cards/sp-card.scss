@@ -1,0 +1,195 @@
+$sp-tr: 0;
+
+.sp-card {
+    position: relative;
+    padding-bottom: 100px;
+
+    &:hover {
+        z-index: 2;
+        
+        @media (min-width: $min-hover) {
+            
+            & .sp-card__info {
+                // z-index: 1;
+                box-shadow: 0px 10px 26px rgba(54, 52, 52, 0.08);
+
+            }
+
+            & .sp-card__site {
+                background: $accent;
+            }
+
+            & .sp-card__site-title {
+                color: $light;
+            }
+
+            & .sp-card__site-url {
+                color: $light;
+            }
+
+            & .sp-card__site-arrow {
+
+                & svg {
+                    fill: $light;
+                }
+            }
+
+            & .sp-card__content {
+                max-height: 400px;
+                padding: 30px 11%;
+                
+                // opacity: 1;
+            }
+        }
+    }
+
+    &:active {
+
+        & .sp-card__site {
+            background: #B295B5;
+        }
+    }
+}
+
+.sp-card__body {
+    background: #FBF8FA;
+    padding: 30px 36px 24px;
+
+    @media (max-width: $tablet) {
+        padding: 24px;
+    }
+}
+
+.sp-card__title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: lhperc(13, 20);
+
+    @media (max-width: $tablet) {
+        font-size: 12px;
+    }
+}
+
+.sp-card__company-logo {
+    position: relative;
+    width: 100%;
+    max-height: 80px;
+    margin-top: 40px;
+
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 32%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        object-position: left;
+    }
+}
+
+.sp-card__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+}
+
+.sp-card__content {
+    max-height: 0;
+    background: $light; 
+    overflow: hidden;
+    // opacity: 0;
+    padding: 0 11%;
+    transition: $sp-tr;
+    overflow-y: auto;
+
+    @include scrollbar(4px, 100%)
+}
+
+.sp-card__direction {
+    display: flex;
+    flex-direction: column;
+    line-height: lhperc(12, 20);
+}
+
+.sp-card__direction-title {
+    font-size: 12px;
+    color: adjust-color($text-dark, $alpha: -.6)
+}
+
+.sp-card__direction-text {
+    font-size: 13px;
+    color: $accent;
+}
+
+.sp-card__content-title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: lhperc(13, 20);
+    margin-top: 14px;
+}
+
+.sp-card__content-text {
+    font-size: 13px;
+    line-height: lhperc(13, 25);
+    margin-top: 10px;
+}
+
+.sp-card__site {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $light;
+    border: 1px solid adjust-color($accent, $alpha: -.9);
+    margin: auto 0 0 0;
+    padding: 26px 36px;
+    // transition: $tr;
+
+    @media (max-width: $tablet) {
+        padding: 24px;
+    }
+}
+
+.sp-card__site-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: lhperc(13, 22);
+}
+
+.sp-card__site-title {
+    font-weight: 500;
+    transition: $sp-tr;
+}
+
+.sp-card__site-url {
+    color: $accent;
+    transition: $sp-tr;
+}
+
+.sp-card__site-arrow {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+
+    & svg {
+        fill: $accent;
+        transition: $sp-tr;
+    }
+}
