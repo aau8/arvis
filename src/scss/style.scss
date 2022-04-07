@@ -33,7 +33,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 
     & > .content {
         flex: 1 0 auto;
@@ -51,7 +51,8 @@ body {
 }
 
 .info {
-    width: 100%;
+    max-width: 1044px;
+    width: 75%;
     margin-left: 68px;
     margin-bottom: 100px;
 
@@ -64,7 +65,13 @@ body {
         margin-bottom: 80px;
     }
 
+    @media (max-width: 790px) {
+        width: 72%;
+        margin-left: 12px;
+    }
+
     @media (max-width: $tablet) {
+        width: 100%;
         margin: 32px 0 0 0;
         margin-bottom: 50px;
     }
@@ -87,16 +94,20 @@ body {
 
 // Компоненты
 // @import './components/_forms';
-// @import './components/_modal';
 @import './components/section';
 @import './components/slider';
 @import './components/breadcrumbs';
 @import './components/sidebar';
 // @import './components/buttons';
 
+// Карточки
 @import './components/cards/n-card';
 @import './components/cards/sv-card';
 @import './components/cards/struct-card';
+
+// Модальные окна
+@import './components/modals/modal';
+@import './components/modals/modal-structure'; 
  
 // Текстовые компоненты
 @import './components/text/_text';
@@ -114,3 +125,10 @@ body {
 
 // Страница структуры
 @import './sections/s-struct';
+
+// Страница "О нас"
+@import './sections/about';
+@import './sections/s-targets';
+@import './sections/s-organs';
+@import './sections/s-assist';
+@import './sections/s-effect';

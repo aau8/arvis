@@ -10,7 +10,7 @@
 		"scope": "html",
 		"prefix": "_c-section-header",
 		"body": [
-			"<div class=\"section__header\">\n\t<h2 class=\"title_section\">Кейс дня</h2>\n\t<a href=\"#\" class=\"link-section\">\n\t\t<span>Все кейсы</span>\n\t\t<span class=\"link-section__icon\"><svg><use href='./img/sprite.svg#arrow-linear'></use></svg></span>\n\t</a>\n</div>"
+			"<div class=\"section__header\">\n\t<div class=\"section__header-main\">\n\t\t<h2 class=\"title_section\">Title</h2>\n\t\t<a href=\"#\" class=\"link-section\">\n\t\t\t<span>Link</span>\n\t\t\t<span class=\"link-section__icon\"><svg><use href='./img/sprite.svg#arrow-linear'></use></svg></span>\n\t\t</a>\n\t</div>\n\t<p class=\"section__header-content\">Text</p>\n</div>"
 		],
 		"description": ""
 	}

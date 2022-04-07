@@ -1,0 +1,142 @@
+.s-assist__body {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap: 24px;
+
+    & .swiper-container {
+        padding-bottom: 16px;
+    }
+}
+
+.s-assist__slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sa-slide {
+    height: auto;
+}
+
+.sa-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &_purple {
+
+        & .sa-card__correction {
+            background: #5272FF;
+        }
+
+        & .sa-card__content {
+
+            &::before {
+                border-top-color: #5272FF;
+            }
+        }
+    }
+
+    &_red {
+
+        & .sa-card__correction {
+            background: #C43185;
+        }
+
+        & .sa-card__content {
+
+            &::before {
+                border-top-color: #C43185;
+            }
+        }
+    }
+
+    &_blue {
+
+        & .sa-card__correction {
+            background: #225378;
+        }
+
+        & .sa-card__content {
+
+            &::before {
+                border-top-color: #225378;
+            }
+        }
+    }
+}
+
+.sa-card_purple {
+
+}
+
+.sa-card__content {
+    position: relative;
+    flex: 1 1 0;
+    background: $light;
+    padding: 36px;
+    box-shadow: $shadow-card;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -26px;
+        right: -26px;
+        border: 36px solid transparent;
+        transform: rotate(-135deg);
+    }
+}
+
+.sa-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: lhperc(14, 28);
+    text-transform: uppercase;
+}
+
+.sa-card__info {
+    font-size: 13px;
+    line-height: lhperc(13, 24);
+    margin-top: 20px;
+}
+
+.sa-card__company-logo {
+    position: relative;
+    width: 100%;
+    max-height: 84px;
+    margin-top: 18px;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 32%;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        object-position: left;
+    }
+}
+
+.sa-card__descr {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: lhperc(12, 22);
+    margin-top: 30px;
+}
+
+.sa-card__correction {
+    width: 100%;
+    min-height: 154px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: lhperc(13, 22);
+    color: $light;
+    // background: $light;
+    padding: 24px 36px;
+    margin-top: 28px;
+}

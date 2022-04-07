@@ -8,22 +8,35 @@
     // @media (max-width: $mobile-m) {
     //     margin: 60px 0;
     // }
+
+    // &_no-indent {
+    //     margin: 0;
+    // }
 }
 
 .section__header {
+    margin-bottom: 50px;
+    
+    @media (max-width: $tablet) {
+        margin-bottom: 40px;
+    }
+    
+    @media (max-width: $mobile-l) {
+        margin-bottom: 32px;
+    }
+}
+
+.section__header-main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+}
 
-    @media (max-width: $tablet) {
-        margin-bottom: 40px;
-    }
-
-    @media (max-width: $mobile-l) {
-        margin-bottom: 32px;
-    }
+.section__header-content {
+    font-size: 14px;
+    line-height: lhperc(14, 28);
+    margin-top: 16px;
 }
 
 // .section-link {

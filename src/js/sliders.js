@@ -206,3 +206,41 @@ const videoSlider = new Swiper('.s-video__slider', {
     nextEl: '.s-video__arrow_next',
   },
 })
+
+
+const assistSlider = new Swiper('.s-assist__slider', {
+  modules: [Navigation],
+  // allowTouchMove: true,
+  // spaceBetween: 27,
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    768: {
+      // allowTouchMove: false,
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    600: {
+      allowTouchMove: true,
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    0: {
+      allowTouchMove: true,
+      slidesPerView: 1,
+      spaceBetween: 24,
+    }
+  },
+
+  navigation: {
+    prevEl: '.s-assist__arrow_prev',
+    nextEl: '.s-assist__arrow_next',
+  },
+})
