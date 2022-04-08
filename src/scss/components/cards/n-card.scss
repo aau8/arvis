@@ -18,6 +18,16 @@
             & .n-card__content {
                 border-color: $outline-dark;
             }
+
+            & .n-card__more {
+
+                & span:first-child {
+    
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 
@@ -162,5 +172,24 @@
 }
 
 .n-card__more {
+    
+    & span {
 
+        &:first-child {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 3px;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                opacity: 0;
+                transition: $tr;
+            }
+        }
+    }
 }

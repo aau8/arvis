@@ -1,42 +1,69 @@
 // import { getSiblings } from './util/functions.js'
 
-// // Ползунок в меню
-// window.addEventListener('load', e => {
-//     const menu = document.querySelector('.menu__list')
-//     const roller = menu.querySelector('.menu__roller')
-//     const menuItemElems = menu.querySelectorAll('li')
-//     const menuItemActive = menu.querySelector('._current-page')
+// Одинаковый размер карточек на странице проектов
+if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
+    const projectBody = document.querySelector('.s-projects__body')
+    const columnElems = projectBody.querySelectorAll('.s-projects__column')
+    let titleArr = []
+    let columnArr = []
+    
+    for (let i = 0; i < columnElems.length; i++) {
+        const column = columnElems[i];
+        const cardElems = column.querySelectorAll('.spr-card')
+        const title = column.querySelector('.s-projects__column-title')
+        let cardArr = []
 
-//     const itemPosLeft = menuItemActive.getBoundingClientRect().left - menu.getBoundingClientRect().left
-//     const itemWidth = menuItemActive.clientWidth
-
-//     roller.style.left = itemPosLeft + 'px'
-//     roller.style.width = itemWidth + 'px'
-//     console.log(menuItemElems[1].getBoundingClientRect().left - menu.getBoundingClientRect().left)
-
-//     for (let i = 0; i < menuItemElems.length; i++) {
-//         const menuItem = menuItemElems[i];
+        titleArr.push(title.clientHeight)
+    
         
-//         menuItem.addEventListener('mousemove', e => {
-//             const siblingItems = getSiblings(menuItem)
+        for (let i = 0; i < cardElems.length; i++) {
+                const card = cardElems[i];
+            
+                cardArr.push(card.clientHeight)
+        }
 
-//             console.log('ok')
-//             menuItem.style.opacity = 1
+        columnArr.push(cardArr)
+    }
+    
+    // Установка размера заголовкам
+    const maxValueHeightTitle = Math.max(...titleArr)
+    const titleElems = projectBody.querySelectorAll('.s-projects__column-title')
+    
+    for (let i = 0; i < titleElems.length; i++) {
+        const title = titleElems[i];
+        
+        title.style.height = maxValueHeightTitle + 'px'
+    }
 
-//             for (let i = 0; i < siblingItems.length; i++) {
-//                 const item = siblingItems[i];
-                
-//                 item.style.opacity = .5
-//             }
-//         })
+    // Установка размера карточкам
+    const columnArrLength = columnArr.map(e => { return e.length })
+    const columnWithMoreCards = columnArrLength.indexOf( Math.max(...columnArrLength) )
 
-//         menuItem.addEventListener('mouseleave', e => {
+    for (let i = 0; i < columnArrLength[columnWithMoreCards]; i++) {
+        let cardArr = []
+        
+        for (let a = 0; a < columnElems.length; a++) {
+            const column = columnElems[a];
+            const card = column.querySelectorAll('.spr-card')[i]
 
-//             for (let i = 0; i < menuItemElems.length; i++) {
-//                 const menuItem = menuItemElems[i];
-                
-//                 menuItem.style.opacity = 1
-//             }
-//         })
-//     }
-// })
+            if (card != undefined) {
+
+                cardArr.push(card.clientHeight)
+            }
+            else {
+                cardArr.push(null)
+            }
+        }
+
+        const maxValueHeightCard = Math.max(...cardArr)
+
+        for (let a = 0; a < columnElems.length; a++) {
+            const column = columnElems[a];
+            const card = column.querySelectorAll('.spr-card')[i]
+
+            if (card != undefined) {
+                card.style.height = maxValueHeightCard + 'px'
+            }
+        }
+    }
+}

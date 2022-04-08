@@ -97,6 +97,16 @@ export default {
             },
           }
         },
+        // Видео
+        {
+          test: /\.(mp4|mp3)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: content => {
+              return content.filename.replace('src/', '')
+            },
+          }
+        },
       ]
   },
 }
