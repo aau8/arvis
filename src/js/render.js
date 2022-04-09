@@ -67,3 +67,21 @@ if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
         }
     }
 }
+
+// Увеличение элементов иллюстрации при наведении на карточке в разделе "Какие организации входят в АРВИС"
+
+const cardElems = document.querySelectorAll('.so-card')
+
+for (let i = 0; i < cardElems.length; i++) {
+    const card = cardElems[i];
+    const cardData = card.dataset.part
+    const part = document.getElementById(cardData)
+    
+    card.addEventListener('mouseenter', e => {
+        part.classList.add('_active')
+    })
+    
+    card.addEventListener('mouseleave', e => {
+        part.classList.remove('_active')
+    })
+}

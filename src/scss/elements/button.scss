@@ -257,6 +257,23 @@
 
     & span {
 
+        &:first-child {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 3px;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                opacity: 0;
+                transition: $tr;
+            }
+        }
+
         &:nth-child(2) {
             margin-left: 14px;
 
@@ -281,6 +298,13 @@
         color: $light;
 
         & span {
+
+            &:first-child {
+    
+                &::after {
+                    background: $light;
+                }
+            }
 
             svg {
                 fill: $light;

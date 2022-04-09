@@ -32,6 +32,10 @@
         @media (min-width: $min-hover) {
             box-shadow: none;
             border-color: $outline-dark;
+
+            & .ect-footer__more span:first-child::after {
+                opacity: 1;
+            }
         }
     }
 

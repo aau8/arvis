@@ -14,6 +14,61 @@
 }
 
 .se__ill {
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    & svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+.se__ill-text {
+    pointer-events: none;
+}
+
+.se__ill-part {
+    transition: $tr;
+
+}
+
+#se__ill-part-red {
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: scale(1.1) translate(-6.5%, -2.5%);
+        }
+    }
+}
+
+#se__ill-part-purple {
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: scale(1.1) translate(-4.5%, -6%);
+        }
+    }
+}
+
+#se__ill-part-blue {
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: scale(1.1) translate(-2.5%, -2.5%);
+        }
+    }
 }
 
 .se__list {
@@ -22,7 +77,6 @@
 
 .se__item {
     position: absolute;
-    z-index: -1;
     font-size: 13px;
     line-height: lhperc(13, 22);
 
