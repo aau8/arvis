@@ -146,6 +146,7 @@ body {
 @import './components/cards/p-card';
 @import './components/cards/pub-card';
 @import './components/cards/case-card';
+@import './components/cards/m-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -198,3 +199,6 @@ body {
 
 // Страница с кейсами
 @import './sections/cases';
+
+// Страница с членами ассоциации
+@import './sections/members';
