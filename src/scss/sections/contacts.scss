@@ -1,0 +1,141 @@
+.contacts {
+    margin-top: 60px;
+
+    @media (max-width: $tablet) {
+        margin-top: 48px;
+    }
+}
+
+.contacts__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 86px;
+
+    @media (max-width: 1200px) {
+        gap: 24px 32px;
+    }
+
+    @media (max-width: $laptop) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacts__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 37px;
+
+    @media (max-width: 550px) {
+        gap: 18px;
+    }
+}
+
+.contacts__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Карточка
+.c-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.06);
+    padding: 34px 19px 38px 42px;
+
+    @media (max-width: 550px) {
+        padding: 24px 16px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 24px;
+    }
+}
+
+.c-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A64B89;
+    margin-bottom: 22px;
+
+    @media (max-width: 550px) {
+        margin-bottom: 16px;
+    }
+}
+
+.c-card__text {
+    font-size: 14px;
+    line-height: lhperc(14, 28);
+
+    @media (max-width: 550px) {
+        line-height: 1.6;
+    }
+}
+
+.contacts__map {
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 78%;
+    }
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.c-card__subtitle {
+    font-size: 13px;
+    color: rgba(43, 43, 43, 0.6);
+    line-height: lhperc(13, 26);
+    margin-bottom: 8px;
+
+    @media (max-width: 550px) {
+        line-height: 1.6;
+    }
+}
+
+.c-card__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: lhperc(14, 28);
+    color: $accent;
+
+    @media (max-width: 550px) {
+        line-height: 1.6;
+    }
+
+    &:hover {
+                
+        @media (min-width: $min-hover) {
+            color: $accent;
+        }
+    }
+
+    &:active {
+        color: adjust-color($accent, $alpha: -.3);
+    }
+}
+
+.c-card__separator {
+    border-top: 1px solid rgba(126, 79, 132, 0.14);
+    margin: 28px 0;
+
+    @media (max-width: 550px) {
+        margin: 16px 0;
+    }
+}

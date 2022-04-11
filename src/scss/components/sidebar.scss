@@ -15,14 +15,16 @@
         max-width: 230px;
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: 900px) {
         position: initial;
         max-width: none;
         width: 100%;
+        padding: 24px 0;
+        margin-bottom: 0;
     }
 
     @media (max-width: $mobile-l) {
-        padding: 24px 0;
+        padding: 16px 0;
     }
 }
 
@@ -31,8 +33,12 @@
     &:not(:last-child) {
         margin-bottom: 32px;
 
-        @media (max-width: $mobile-l) {
+        @media (max-width: $tablet) {
             margin-bottom: 24px;
+        }
+
+        @media (max-width: $mobile-l) {
+            margin-bottom: 16px;
         }
     }
 

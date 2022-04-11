@@ -36,6 +36,7 @@ body {
     overflow-x: hidden;
 
     & > .content {
+        min-height: 700px;
         flex: 1 0 auto;
     }
 }
@@ -44,7 +45,7 @@ body {
     display: flex;
     padding-top: 50px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: 900px) {
         flex-direction: column;
         padding-top: 0;
     }
@@ -70,7 +71,7 @@ body {
         margin-left: 12px;
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: 900px) {
         width: 100%;
         margin: 32px 0 0 0;
         margin-bottom: 50px;
@@ -81,6 +82,29 @@ body {
         &:not(:last-child) {
             margin-bottom: 60px;
         }
+    }
+}
+
+.info__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    @media (max-width: $laptop) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    @media (max-width: 680px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -140,3 +164,12 @@ body {
 
 // Страница "Проекты"
 @import './sections/s-projects';
+
+// Страница 404
+@import './sections/pnf';
+
+// Страница Контакты
+@import './sections/contacts';
+
+// Страница Новостей
+@import './sections/news';
