@@ -124,6 +124,7 @@ body {
 // Елементы
 @import './elements/button';
 @import './elements/select';
+@import './elements/checkbox';
 @import './elements/logo';
 @import './elements/tag';
 
@@ -144,6 +145,7 @@ body {
 @import './components/cards/spr-card';
 @import './components/cards/p-card';
 @import './components/cards/pub-card';
+@import './components/cards/case-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -193,3 +195,6 @@ body {
 
 // Страница с публикациями
 @import './sections/publications';
+
+// Страница с кейсами
+@import './sections/cases';

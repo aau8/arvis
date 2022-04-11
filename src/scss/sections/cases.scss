@@ -1,0 +1,7 @@
+.cases__body {
+    gap: 42px;
+
+    @media (max-width: $mobile-l) {
+        gap: 32px;
+    }
+}
