@@ -1,3 +1,5 @@
+import { removeAll } from './util/functions.js'
+
 // import { getSiblings } from './util/functions.js'
 
 // Одинаковый размер карточек на странице проектов
@@ -83,5 +85,54 @@ for (let i = 0; i < cardElems.length; i++) {
     
     card.addEventListener('mouseleave', e => {
         part.classList.remove('_active')
+    })
+}
+
+// Списки выбора
+select()
+function select() {
+    // Проверяем есть ли выбранные элементы при загрузке страницы. Если есть, то селект заполняется
+    const selectedItemElems = document.querySelectorAll('.select-dropdown__item._selected')
+
+    for (let i = 0; i < selectedItemElems.length; i++) {
+        const selectedItem = selectedItemElems[i];
+        const select = selectedItem.closest('.select')
+        const sTitle = select.querySelector('.select-input__title')
+
+        sTitle.innerText = selectedItem.innerHTML
+        select.classList.add('_valid')
+    }
+
+    // Если пользователь кликнул по селекту, то он открывается/закрывается. Также он закроется если кликнуть вне его области
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        // Если пользователь кликнул вне зоны селекта
+        if (!target.classList.contains('select') && !target.closest('.select._open')) {
+            
+            if (document.querySelector('.select._open')) {
+                document.querySelector('.select._open').classList.remove('_open')
+            }
+        }
+
+        // Если пользователь кликнул по шапке селекта
+        if (target.classList.contains('select-input')) {
+            target.parentElement.classList.toggle('_open')
+        }
+
+        // Если пользователь выбрал пункт из списка селекта
+        if (target.classList.contains('select-dropdown__item')) {
+            const select = target.closest('.select')
+            const sTitle = select.querySelector('.select-input__title')
+            const neighbourTargets = target.parentElement.querySelectorAll('.select-dropdown__item')
+
+            sTitle.innerText = target.innerText
+
+            removeAll(neighbourTargets, '_selected')
+            target.classList.add('_selected')
+
+            select.classList.remove('_open')
+            select.classList.add('_valid')
+        }
     })
 }

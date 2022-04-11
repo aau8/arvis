@@ -1,0 +1,7 @@
+.presentations__body {
+    grid-auto-rows: 232px;
+
+    @media (min-width: 480px) and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -113,6 +113,7 @@ body {
 
 // Елементы
 @import './elements/button';
+@import './elements/select';
 @import './elements/logo';
 @import './elements/tag';
 
@@ -122,6 +123,7 @@ body {
 @import './components/slider';
 @import './components/breadcrumbs';
 @import './components/sidebar';
+@import './components/filter';
 // @import './components/buttons';
 
 // Карточки
@@ -130,6 +132,7 @@ body {
 @import './components/cards/struct-card';
 @import './components/cards/sp-card';
 @import './components/cards/spr-card';
+@import './components/cards/p-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -173,3 +176,6 @@ body {
 
 // Страница Новостей
 @import './sections/news';
+
+// Страница с презентационными материалами
+@import './sections/presentations';
