@@ -4,6 +4,7 @@ import { find, findAll, removeAll, bodyLock, getSiblings } from "./util/function
 import './sliders.js'
 import '../scss/style.scss'
 
+import './ajax/report.js'
 
 
 // Мобильное меню

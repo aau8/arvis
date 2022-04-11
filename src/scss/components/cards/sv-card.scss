@@ -1,6 +1,23 @@
 // section video card
 .sv-card {
     width: 100%;
+
+    &:hover {
+
+        @media (min-width: $min-hover) {
+            
+            & .sv-card__title {
+                color: $accent;
+            }
+        }
+    }
+
+    &:active {
+            
+        & .sv-card__title {
+            color: adjust-color($accent, $alpha: -.3);
+        }
+    }
 }
 
 .sv-card__thumb {
@@ -58,6 +75,7 @@
     font-size: 16px;
     font-weight: 700;
     line-height: lhperc(16, 30);
+    transition: $tr;
 }
 
 .sv-card__text {
