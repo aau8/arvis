@@ -108,6 +108,16 @@ body {
     }
 }
 
+.info__body_one-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    @media (max-width: 900px) {
+        gap: 16px;
+    }
+}
+
 // Анимация
 @import './_animation';
 
@@ -133,6 +143,7 @@ body {
 @import './components/cards/sp-card';
 @import './components/cards/spr-card';
 @import './components/cards/p-card';
+@import './components/cards/pub-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -179,3 +190,6 @@ body {
 
 // Страница с презентационными материалами
 @import './sections/presentations';
+
+// Страница с публикациями
+@import './sections/publications';

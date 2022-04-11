@@ -1,48 +1,48 @@
 .filter {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background: #fff;
     box-shadow: 0px 8px 28px rgba(38, 38, 38, 0.06);
-    padding: 36px 50px;
+    padding: 24px 26px;
     margin-top: 50px;
 
     @media (max-width: 900px) {
+        padding: 20px 12px;
         margin-top: 32px;
     }
 
-    @media (max-width: $tablet) {
-        padding: 24px 32px;
-    }
-
-    @media (max-width: 600px) {
-        flex-direction: column;
+    @media (max-width: 900px) {
     }
 
     @media (max-width: $mobile-l) {
-        padding: 16px 24px;
+        padding: 16px 4px;
         margin-top: 24px;
     }
 }
 
 // Блок фильтра
 .filter-block {
+    min-width: 190px;
     flex: 1 1 0;
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    &:not(:last-child) {
-        margin-right: 46px;
+    // &:not(:last-child) {
+    //     margin-right: 46px;
 
-        @media (max-width: $tablet) {
-            margin-right: 32px;
-        }
+    //     @media (max-width: $tablet) {
+    //         margin-right: 32px;
+    //     }
 
-        @media (max-width: 600px) {
-            margin: 0 0 16px 0;
-        }
-    }
+    //     @media (max-width: 600px) {
+    //         margin: 0 0 16px 0;
+    //     }
+    // }
+
+    margin: 12px 24px;
 }
 
 .filter-block__title {
