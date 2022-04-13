@@ -26,6 +26,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/list": "^5.11.0",
+    "@fullcalendar/timegrid": "^5.11.0",
     "bulma": "^0.9.3",
     "swiper": "^8.0.7"
   },

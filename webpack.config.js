@@ -117,6 +117,16 @@ export default {
             },
           }
         },
+        // PHP файлы
+        {
+          test: /\.(php)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: content => {
+              return content.filename.replace('src/', '')
+            },
+          }
+        },
       ]
   },
 }
