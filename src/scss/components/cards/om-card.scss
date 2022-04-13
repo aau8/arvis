@@ -1,0 +1,160 @@
+$red: #C43185;
+$blue: #0085E5; 
+$purple: #7E4F84; 
+
+.om-card {
+    position: relative;
+    box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.06);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -18px;
+        transform: translate(100%, -50%);
+        display: block;
+        border: solid transparent;
+        border-width: 36px 24px;
+
+        @media (max-width: $laptop) {
+            right: -14px;
+            border-width: 26px 16px;
+        }
+
+        @media (max-width: $tablet) {
+            top: auto;
+            bottom: 0;
+            right: auto;
+            left: 50%;
+            transform: translate(-50%, 100%) rotate(90deg);
+
+            // position: initial;
+            // transform: rotate(90deg);
+        }
+    }
+
+    @media (min-width: $tablet + 1px) {
+        &:nth-child(3n + 3) {
+    
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: $tablet) {
+        
+        &:last-child {
+            
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+
+    &_red {
+
+        &::after {
+            border-left-color: $red;
+        }
+
+        & .om-card__header {
+            background: $red;
+        }
+    }
+
+    &_blue {
+
+        &::after {
+            border-left-color: $blue;
+        }
+
+        & .om-card__header {
+            background: $blue;
+        }
+    }
+
+    &_purple {
+
+        &::after {
+            border-left-color: $purple;
+        }
+
+        & .om-card__header {
+            background: $purple;
+        }
+    }
+}
+
+.om-card__header {
+    height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px 12px 36px;
+
+    @media (max-width: $tablet) {
+        height: 60px;
+        padding: 12px 24px;
+    }
+}
+
+.om-card__num {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: lhperc(42, 28);
+    color: rgba(255,255,255,.5);
+
+    @media (max-width: $tablet) {
+        font-size: 32px;
+    }
+}
+
+.om-card__time {
+    display: flex;
+    align-items: center;
+    margin-left: 36px;
+}
+
+.om-card__time-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.om-card__time-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 12px;
+    text-align: left;
+}
+
+.om-card__content {
+    font-size: 12px;
+    line-height: lhperc(12, 22);
+    color: rgba(43, 43, 43, 0.9);
+    background: #fff;
+    padding: 30px 20px 30px 36px;
+
+    @media (max-width: $laptop-l) {
+        padding: 24px;
+    }
+
+    & a {
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+                    
+            @media (min-width: $min-hover) {
+                color: $accent;
+                text-decoration: none;
+            }
+        }
+    
+        &:active {
+            color: adjust-color($accent, $alpha: -.3);
+        }
+    }
+}

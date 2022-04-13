@@ -1,0 +1,10 @@
+.con-members__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 28px;
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+}

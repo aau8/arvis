@@ -90,3 +90,55 @@ $slider-gap: 32px;
         height: 40px;
     }
 }
+
+// Пагинация
+.swiper-pagination {
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+
+    & .swiper-pagination-bullet {
+        position: relative;
+        width: 28px;
+        height: 3px;
+        display: block;
+        border-radius: 20px;
+        background: adjust-color($accent, $alpha: -.8);
+        transition: $tr;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 500%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @media (max-width: $mobile-l) {
+                margin-right: 12px;
+            }
+        }
+
+        &-active {
+            background: $accent;
+        }
+
+        @media (max-width: $mobile-l) {
+            width: 20px;
+            
+        }
+    }
+
+    @media (max-width: $tablet) {
+        bottom: -24px;
+    }
+}

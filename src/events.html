@@ -69,8 +69,8 @@
                 <div class="container">
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
-                        <li class="breadcrumbs__item"><a class="link" href="#">Материалы</a></li>
-                        <li class="breadcrumbs__item">Инфографика</li>
+                        <li class="breadcrumbs__item"><a class="link" href="#">Деятельность</a></li>
+                        <li class="breadcrumbs__item">Проекты</li>
                     </ul>
                 </div>
             </div>
@@ -80,29 +80,35 @@
                 <div class="content-with-sidebar">
                     <aside class="sidebar">
                         <div class="sidebar-block">
-                            <h3 class="sidebar-block__title"><a class="link" href="#">Галерея кейсов</a></h3>
-                        </div>
-                        <div class="sidebar-block">
-                            <h3 class="sidebar-block__title"><a class="link" href="#">Публикациии экспертов АРВИС</a></h3>
-                        </div>
-                        <div class="sidebar-block">
-                            <h3 class="sidebar-block__title"><a class="link" href="#">Презентационные материалы</a></h3>
+                            <h3 class="sidebar-block__title"><a class="link" href="#">Проекты</a></h3>
                         </div>
                         <div class="sidebar-block _active">
-                            <h3 class="sidebar-block__title"><a class="link" href="#">Инфографика</a></h3>
+                            <h3 class="sidebar-block__title"><a class="link" href="#">Мероприятия</a></h3>
+                            <ul class="sidebar-block__list">
+                                <li><a class="link" href="#">Календарь</a></li>
+                                <li><a class="link" href="#">Анонсы</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-block">
+                            <h3 class="sidebar-block__title"><a class="link" href="#">Отчетные документы</a></h3>
                         </div>
                     </aside>
                     <div class="info">
-                        <section class="infographics">
+                        <section class="s-calendar">
                             <div class="section__header">
 								<div class="section__header-main">
-									<h2 class="title_section">Инфографика</h2>
+									<h2 class="title_section">Календарь мероприятий</h2>
 								</div>
                             </div>
-                            <div class="infographics__body">
-								<div class="infographics__block">
-									<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQLrFJ-rQTkw-CMvGnrWF-ynW_bhmVNIHPMwq1qfqCkrIK4Vl6Z4B8mFB6cC892Rg/pubhtml?widget=true&amp;headers=false"></iframe>
-								</div>
+                            <div class="s-calendar__body">
+                                <div class="calendar">
+                                    <div id="calendar-events" class="calendar__body">
+
+                                    </div>
+                                    <div class="calendar__footer">
+
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -194,6 +200,31 @@
 			</div>
 		</footer>
 	</div>
+
+    <script>
+        const arvisEvents = [
+            {
+                start: '2022-03-29',
+                display: 'background',
+                classNames: ['organized-by-arvis', 'organized-by-arvis-22222']
+            },
+            {
+                start: '2022-04-08',
+                display: 'background',
+                className: 'organized-by-arvis'
+            },
+            {
+                start: '2022-04-11',
+                display: 'background',
+                className: 'arvis-will-take-part'
+            },
+            {
+                start: '2022-04-12',
+                display: 'background',
+                className: 'arvis-will-take-part'
+            }
+        ]
+    </script>
 </body>
 
 </html>

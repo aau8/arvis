@@ -129,12 +129,13 @@ body {
 @import './elements/tag';
 
 // Компоненты
-// @import './components/_forms';
+@import './components/forms';
 @import './components/section';
 @import './components/slider';
 @import './components/breadcrumbs';
 @import './components/sidebar';
 @import './components/filter';
+@import './components/calendar';
 // @import './components/buttons';
 
 // Карточки
@@ -147,6 +148,9 @@ body {
 @import './components/cards/pub-card';
 @import './components/cards/case-card';
 @import './components/cards/m-card';
+@import './components/cards/cm-card';
+@import './components/cards/om-card';
+@import './components/cards/dm-card';
 
 // Модальные окна
 @import './components/modals/modal';
@@ -200,6 +204,9 @@ body {
 // Страница с кейсами
 @import './sections/cases';
 
+// Страница кейса
+@import './sections/case';
+
 // Страница с членами ассоциации
 @import './sections/members';
 
@@ -208,3 +215,9 @@ body {
 
 // Страница с Инфографикой
 @import './sections/infographics';
+
+// Страница о членстве Арвис
+@import './sections/adv-members';
+@import './sections/con-members';
+@import './sections/order-members';
+@import './sections/docs-members';

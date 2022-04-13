@@ -1,0 +1,15 @@
+.order-members__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+
+    @media (max-width: $laptop) {
+        gap: 40px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

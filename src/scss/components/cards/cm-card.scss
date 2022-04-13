@@ -1,0 +1,50 @@
+.cm-card {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px 40px 40px;
+    background: rgba(166, 75, 137, 0.06);
+
+    @media (max-width: $mobile-l) {
+        padding: 24px 16px 24px 24px;
+    }
+}
+
+.cm-card__icon {
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    margin: auto 0;
+
+    @media (max-width: $mobile-l) {
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.cm-card__content {
+    margin-left: 22px;
+
+    @media (max-width: $mobile-l) {
+        margin-left: 16px;
+    }
+}
+
+.cm-card__title {
+    font-size: 13px;
+    line-height: lhperc(13, 22);
+    color: rgba(43, 43, 43, 0.9);
+}
+
+.cm-card__price {
+    font-size: 28px;
+
+    &::after {
+        content: '₽';
+        margin-left: 8px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 22px;
+    }
+}

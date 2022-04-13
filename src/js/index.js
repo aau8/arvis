@@ -3,8 +3,10 @@ import './render.js'
 import { find, findAll, removeAll, bodyLock, getSiblings } from "./util/functions.js"
 import './sliders.js'
 import '../scss/style.scss'
-
+import './forms.js'
 import './ajax/report.js'
+
+import '../mail.php'
 
 
 // Мобильное меню

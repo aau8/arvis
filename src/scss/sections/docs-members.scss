@@ -1,0 +1,10 @@
+.docs-members__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 16px
+    }
+}

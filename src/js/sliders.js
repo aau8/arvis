@@ -244,3 +244,43 @@ const assistSlider = new Swiper('.s-assist__slider', {
     nextEl: '.s-assist__arrow_next',
   },
 })
+
+const caseSlider = new Swiper('.case__slider', {
+  modules: [Navigation, Pagination],
+  loop: true,
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    768: {
+      // allowTouchMove: false,
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    600: {
+      allowTouchMove: true,
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    0: {
+      allowTouchMove: true,
+      slidesPerView: 1,
+      spaceBetween: 24,
+    }
+  },
+
+  navigation: {
+    prevEl: '.case__arrow_prev',
+    nextEl: '.case__arrow_next',
+  },
+
+  pagination: {
+    el: '.case__pagination'
+  }
+})

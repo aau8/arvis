@@ -1,0 +1,55 @@
+.calendar__body {
+    max-width: 496px;
+    width: 100%;
+}
+
+// Стили элементов календаря
+.fc-daygrid-day-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fc-day-today {
+    background-color: transparent !important;
+}
+
+.fc-scrollgrid-sync-table {
+    height: auto !important;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none !important;
+}
+
+.fc-theme-standard th {
+    border: none !important;
+}
+
+.fc-theme-standard td {
+    border: none !important;
+}
+
+.fc .fc-daygrid-day-frame {
+    min-height: auto !important;
+    padding: 4px 0;
+    margin: 2px;
+}
+
+.organized-by-arvis {
+    z-index: -1 !important;
+    background: #5272FF !important;
+    opacity: 1 !important;
+}
+
+.arvis-will-take-part {
+    z-index: -1 !important;
+    background: #7E4F84 !important;
+    opacity: 1 !important;
+}
+
+.event-day-number {
+    color: #fff;
+    opacity: 1 !important;
+}

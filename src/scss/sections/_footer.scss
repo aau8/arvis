@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     color: $light;
-    background: top center/cover no-repeat url('../img/footer-bg.png');
+    background: top center/cover no-repeat #333 url('../img/footer-bg.png');
     margin: auto 0 0 0;
 
     &::before {

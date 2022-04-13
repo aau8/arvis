@@ -136,3 +136,57 @@ function select() {
         }
     })
 }
+
+// Плейсхолдер текстовых полей
+labelTextfield()
+function labelTextfield() {
+    const textfieldElems = document.querySelectorAll('.textfield')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i];
+        const input = textfield.querySelector('input, textarea')
+        const label = textfield.querySelector('label')
+
+        if (input.value != '') {
+            label.classList.add('_change-label')
+        }
+
+        input.addEventListener('focus', e => {
+            label.classList.add('_change-label')
+        })
+
+        input.addEventListener('blur', e => {
+            if (input.value === '') {
+                label.classList.remove('_change-label')
+            }
+        })
+    }
+}
+
+// Календарь с событиями
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+// import timeGridPlugin from '@fullcalendar/timegrid';
+// import listPlugin from '@fullcalendar/list';
+
+let calendar = new Calendar(document.querySelector('#calendar-events'), {
+    plugins: [ dayGridPlugin ],
+    initialView: 'dayGridMonth',
+    headerToolbar: {
+        left: 'prev,next',
+        center: '',
+        right: 'title'
+    },
+    events: arvisEvents
+});
+calendar.render();
+
+const gridDays = document.querySelectorAll('.organized-by-arvis, .arvis-will-take-part')
+
+for (let i = 0; i < gridDays.length; i++) {
+    const gridDay = gridDays[i];
+    const parent = gridDay.closest('.fc-daygrid-day')
+    const dayNumber = parent.querySelector('.fc-daygrid-day-top')
+
+    dayNumber.classList.add('event-day-number')
+}

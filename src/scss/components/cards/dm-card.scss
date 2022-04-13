@@ -1,0 +1,49 @@
+.dm-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(125.17deg, rgba(47, 63, 82, 0.04) 18.99%, rgba(52, 89, 138, 0.04) 45.19%, rgba(166, 75, 137, 0.04) 70.85%);
+    padding: 22px 40px;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            transform: translate(0, -4px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+        }
+    }
+
+    &:active {
+        transform: none;
+        box-shadow: none;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 16px 24px;
+
+        &:active {
+            
+            & .dm-card__title {
+                color: $accent;
+            }
+        }
+    }
+}
+
+.dm-card__icon {
+    max-width: 46px;
+    width: 100%;
+
+    @media (max-width: $tablet) {
+        max-width: 32px;
+    }
+}
+
+.dm-card__title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 35px;
+
+    @media (max-width: $tablet) {
+        margin-left: 24px;
+    }
+}
