@@ -70,7 +70,7 @@
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
                         <li class="breadcrumbs__item"><a class="link" href="#">Деятельность</a></li>
-                        <li class="breadcrumbs__item">Проекты</li>
+                        <li class="breadcrumbs__item">Мероприятия</li>
                     </ul>
                 </div>
             </div>
@@ -100,10 +100,126 @@
 									<h2 class="title_section">Календарь мероприятий</h2>
 								</div>
                             </div>
-                            <div class="s-calendar__body">
+                            <div class="s-calendar__content">
                                 <div class="calendar">
-                                    <div id="calendar-events" class="calendar__body">
-
+                                    <div class="calendar__content">
+                                        <div class="calendar__header">
+                                            <div class="select calendar__mounth">
+                                                <div class="select-input">
+                                                    <span class="select-input__title"></span>
+                                                    <div class="calendar__mounth-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13.9375 1.25H12.5V0.5C12.5 0.223875 12.2762 0 12 0C11.7238 0 11.5 0.223875 11.5 0.5V1.25H4.5V0.5C4.5 0.223875 4.27616 0 4 0C3.72384 0 3.5 0.223875 3.5 0.5V1.25H2.0625C0.925219 1.25 0 2.17522 0 3.3125V13.9375C0 15.0748 0.925219 16 2.0625 16H13.9375C15.0748 16 16 15.0748 16 13.9375V3.3125C16 2.17522 15.0748 1.25 13.9375 1.25ZM2.0625 2.25H3.5V2.75C3.5 3.02612 3.72384 3.25 4 3.25C4.27616 3.25 4.5 3.02612 4.5 2.75V2.25H11.5V2.75C11.5 3.02612 11.7238 3.25 12 3.25C12.2762 3.25 12.5 3.02612 12.5 2.75V2.25H13.9375C14.5234 2.25 15 2.72662 15 3.3125V4.5H1V3.3125C1 2.72662 1.47662 2.25 2.0625 2.25ZM13.9375 15H2.0625C1.47662 15 1 14.5234 1 13.9375V5.5H15V13.9375C15 14.5234 14.5234 15 13.9375 15Z" fill="#7E4F84"/>
+                                                        </svg>                                                            
+                                                    </div>
+                                                </div>
+                                                <div class="select-dropdown">
+                                                    <ul class="select-dropdown__list">
+                                                        <li class="select-dropdown__item" data-month-id="0">Январь</li>
+                                                        <li class="select-dropdown__item" data-month-id="1">Февраль</li>
+                                                        <li class="select-dropdown__item" data-month-id="2">Март</li>
+                                                        <li class="select-dropdown__item" data-month-id="3">Апрель</li>
+                                                        <li class="select-dropdown__item" data-month-id="4">Май</li>
+                                                        <li class="select-dropdown__item" data-month-id="5">Июнь</li>
+                                                        <li class="select-dropdown__item" data-month-id="6">Июль</li>
+                                                        <li class="select-dropdown__item" data-month-id="7">Август</li>
+                                                        <li class="select-dropdown__item" data-month-id="8">Сентябрь</li>
+                                                        <li class="select-dropdown__item" data-month-id="9">Ноябрь</li>
+                                                        <li class="select-dropdown__item" data-month-id="10">Октябрь</li>
+                                                        <li class="select-dropdown__item" data-month-id="11">Декабрь</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="calendar-year__container">
+                                                <button class="calendar-year__arrow calendar-year__arrow_prev" style="transform: rotate(180deg);"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                                <div class="calendar-year" dir="rtl">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2022" checked>
+                                                                <label>2022</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2021">
+                                                                <label>2021</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2020">
+                                                                <label>2020</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2019">
+                                                                <label>2019</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2018">
+                                                                <label>2018</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2017">
+                                                                <label>2017</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2016">
+                                                                <label>2016</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2015">
+                                                                <label>2015</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2014">
+                                                                <label>2014</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2013">
+                                                                <label>2013</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2012">
+                                                                <label>2012</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2011">
+                                                                <label>2011</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide calendar-year__slide">
+                                                            <div class="radio calendar-year__radio">
+                                                                <input type="radio" name="calendar-year" value="2010">
+                                                                <label>2010</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="calendar-year__arrow calendar-year__arrow_next"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="calendar__body">
+                                            <div id="calendar-events" class="calendar__calendar-events"></div>
+                                        </div>
                                     </div>
                                     <div class="calendar__footer">
                                         <!-- cf-block -->
@@ -318,28 +434,34 @@
 	</div>
 
     <script>
+		// start - дата события
+		// className - присваиваемый класс событию:
+		// organized-by-arvis - Организованные АРВИС
+		// arvis-will-take-part - АРВИС примет участие
+
         const arvisEvents = [
             {
                 start: '2022-03-29',
-                display: 'background',
-                // classNames: ['organized-by-arvis', 'organized-by-arvis-22222']
-                color: '#333',
-                // title: '1',
-                // textColor: '#fff',
+                className: 'organized-by-arvis'
             },
             {
                 start: '2022-04-08',
-                display: 'background',
                 className: 'organized-by-arvis'
             },
             {
                 start: '2022-04-11',
-                display: 'background',
                 className: 'arvis-will-take-part'
             },
             {
                 start: '2022-04-12',
-                display: 'background',
+                className: 'arvis-will-take-part'
+            },
+            {
+                start: '2022-04-19',
+                className: 'arvis-will-take-part'
+            },
+            {
+                start: '2022-05-12',
                 className: 'arvis-will-take-part'
             }
         ]

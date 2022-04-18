@@ -284,3 +284,33 @@ const caseSlider = new Swiper('.case__slider', {
     el: '.case__pagination'
   }
 })
+
+const calendarSlider = new Swiper('.calendar-year', {
+  modules: [Navigation, Pagination],
+  // loop: true,
+
+  allowTouchMove: false,
+
+  breakpoints: {
+    470: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      slidesPerGroup: 3,
+    },
+    350: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      slidesPerGroup: 2,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 4,
+      slidesPerGroup: 2,
+    },
+  },
+
+  navigation: {
+    nextEl: '.calendar-year__arrow_prev',
+    prevEl: '.calendar-year__arrow_next',
+  },
+})

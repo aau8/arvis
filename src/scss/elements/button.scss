@@ -250,10 +250,11 @@
     display: block;
     transition: $tr;
     margin-left: 8px;
+}
 
-    // & svg {
-    //     color: $text-dark;
-    // }
+.link-go-back {
+    font-weight: 400;
+    color: #949494;
 }
 
 .link-more {

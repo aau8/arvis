@@ -169,8 +169,7 @@ import ruLocale from '@fullcalendar/core/locales/ru.js'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 if (document.getElementById('calendar-events')) {
-    // import timeGridPlugin from '@fullcalendar/timegrid';
-    // import listPlugin from '@fullcalendar/list';
+    setCurrentDate()
 
     let calendar = new Calendar(document.querySelector('#calendar-events'), {
         plugins: [ dayGridPlugin ],
@@ -179,15 +178,78 @@ if (document.getElementById('calendar-events')) {
         firstDay: 1,
         initialView: 'dayGridMonth',
         headerToolbar: {
-            left: 'prev,next',
+            left: '',
             center: '',
-            right: 'title'
+            right: ''
         },
-        eventClassNames: ['hello'],
+        eventDisplay: 'background',
         events: arvisEvents,
         eventChange: e => {
             console.log(e)
-        }
+        },
     });
     calendar.render();
+
+    calendar.on('eventAdd', e => {
+        changeDaysColorText()
+        console.log(e)
+    })
+
+    changeDaysColorText()
+    calendar.gotoDate(new Date())
+
+    // Установка года календаря при выборе года в слайдере
+    const yearContainer = document.querySelector('.calendar-year')
+    yearContainer.addEventListener('click', e => {
+        const target = e.target
+
+        if (target.name == 'calendar-year') {
+            setYearAndMonth(calendar)
+        }
+    })
+
+    const monthContainer = document.querySelector('.calendar__mounth .select-input__title')
+    let observer = new MutationObserver(e => {
+        setYearAndMonth(calendar)
+    })
+    observer.observe(monthContainer, { 
+        childList: true,
+        subtree: true,
+    })
+}
+
+function changeDaysColorText() {
+    const gridDays = document.querySelectorAll('.fc-daygrid-day:not(.fc-day-other)')
+
+    for (let i = 0; i < gridDays.length; i++) {
+        const gridDay = gridDays[i].querySelector('.organized-by-arvis, .arvis-will-take-part');
+                
+        if (gridDay) {
+            const parent = gridDay.closest('.fc-daygrid-day')
+            const dayNumber = parent.querySelector('.fc-daygrid-day-top')
+    
+            dayNumber.classList.add('event-day-number')
+        }
+    }
+}
+
+// setYearAndMonth(calendar)
+function setYearAndMonth(calendar) {
+    const year = document.querySelector('.calendar-year input:checked').value
+    const month = document.querySelector('.calendar__mounth .select-dropdown__item._selected').dataset.monthId
+
+    calendar.gotoDate(new Date(year, month))
+    changeDaysColorText()
+}
+
+// Установка текущего месяца
+function setCurrentDate() {
+    const monthContainer = document.querySelector('.calendar__mounth')
+    const monthInput = monthContainer.querySelector('.select-input__title')
+    const currentMonthId = new Date().getMonth()
+    const currentMonth = monthContainer.querySelector(`.select-dropdown__item[data-month-id="${currentMonthId}"]`)
+
+    monthInput.innerHTML = currentMonth.innerHTML
+    monthContainer.classList.add('_valid')
+    currentMonth.classList.add('_selected')
 }

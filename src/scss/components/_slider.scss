@@ -67,12 +67,12 @@ $slider-gap: 32px;
     &:hover {
         
         @media (min-width: $min-hover) {
-            background-color: adjust-color($accent, $alpha: -.9)
+            background-color: #F2EDF2;
         }
     }
 
     &:active {
-        background-color: adjust-color($accent, $alpha: -.9)
+        background-color: #E5DCE6
     }
 
     &.swiper-button-disabled {
