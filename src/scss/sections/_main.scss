@@ -359,13 +359,11 @@
 }
 
 .main__member-list {
-    // display: flex;
     padding-bottom: 16px;
-
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 340px));
     grid-auto-rows: 120px;
-    column-gap: 38px;
+    gap: 24px 38px;
     overflow-x: auto;
 
     @include scrollbar(100%, 4px, adjust-color($light, $alpha: -.2));
@@ -374,13 +372,13 @@
     @media (max-width: $tablet) {
         grid-template-columns: repeat(3, minmax(200px, 340px));
         grid-auto-rows: 90px;
-        column-gap: 24px;
+        gap: 24px;
     }
 
     @media (max-width: $mobile-l) {
         grid-template-columns: repeat(3, minmax(160px, 340px));
         grid-auto-rows: 70px;
-        column-gap: 12px;
+        gap: 12px;
     }
 
     & > .mm-card {
