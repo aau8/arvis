@@ -45,6 +45,31 @@
     }
 }
 
+.ect__relation-arvis {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    &_organ {
+        background: rgba(0, 133, 229, 0.5);
+    }
+
+    &_part {
+        background: rgba(166, 75, 137, 0.7);
+    }
+}
+
 .event-card__thumb {
     position: relative;
     max-height: 282px;
@@ -83,6 +108,10 @@
     justify-content: space-between;
     padding: 28px 42px 18px;
 
+    @media (max-width: $tablet) {
+        padding: 28px 32px 18px;
+    }
+
     @media (max-width: $mobile-l) {
         padding: 24px;
         padding-bottom: 16px;
@@ -112,9 +141,15 @@
     font-weight: 700;
     color: $light;
     margin-left: 14px;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet) {
+        font-size: 14px;
+        margin-left: 10px;
+    }
 
     @media (max-width: $mobile-l) {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 

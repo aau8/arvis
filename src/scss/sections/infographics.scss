@@ -9,7 +9,8 @@
     &::before {
         content: '';
         display: block;
-        padding-top: 52%;
+        // padding-top: 52%;
+        padding-top: 320px;
     }
 
     & iframe {
@@ -24,6 +25,11 @@
 
         & .doc-title {
             display: none;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
         }
     }
 

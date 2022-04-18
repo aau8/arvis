@@ -164,29 +164,30 @@ function labelTextfield() {
 }
 
 // Календарь с событиями
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-// import timeGridPlugin from '@fullcalendar/timegrid';
-// import listPlugin from '@fullcalendar/list';
+import { Calendar } from '@fullcalendar/core'
+import ruLocale from '@fullcalendar/core/locales/ru.js'
+import dayGridPlugin from '@fullcalendar/daygrid'
 
-let calendar = new Calendar(document.querySelector('#calendar-events'), {
-    plugins: [ dayGridPlugin ],
-    initialView: 'dayGridMonth',
-    headerToolbar: {
-        left: 'prev,next',
-        center: '',
-        right: 'title'
-    },
-    events: arvisEvents
-});
-calendar.render();
+if (document.getElementById('calendar-events')) {
+    // import timeGridPlugin from '@fullcalendar/timegrid';
+    // import listPlugin from '@fullcalendar/list';
 
-const gridDays = document.querySelectorAll('.organized-by-arvis, .arvis-will-take-part')
-
-for (let i = 0; i < gridDays.length; i++) {
-    const gridDay = gridDays[i];
-    const parent = gridDay.closest('.fc-daygrid-day')
-    const dayNumber = parent.querySelector('.fc-daygrid-day-top')
-
-    dayNumber.classList.add('event-day-number')
+    let calendar = new Calendar(document.querySelector('#calendar-events'), {
+        plugins: [ dayGridPlugin ],
+        locales: [ ruLocale ],
+        locale: 'ru',
+        firstDay: 1,
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'prev,next',
+            center: '',
+            right: 'title'
+        },
+        eventClassNames: ['hello'],
+        events: arvisEvents,
+        eventChange: e => {
+            console.log(e)
+        }
+    });
+    calendar.render();
 }
