@@ -32,17 +32,9 @@ b {
     }
   }
 
-//   a,
-//   a:hover,
-//   a:focus {
-//     text-decoration: none;
-//     -webkit-transition: all 0.3s ease;
-//     transition: all 0.3s ease;
-//   }
-
   /**
-     * Headings.
-     */
+  * Headings.
+  */
   h1,
   h2,
   h3,
@@ -102,13 +94,6 @@ b {
     color: #aaa;
   }
 
-  code,
-  kbd,
-  pre,
-  samp {
-    // font-size: 15px;
-  }
-
   pre {
     margin: 20px 0;
     padding: 20px;
@@ -127,8 +112,6 @@ b {
     display: inline-block;
     color: $accent;
     background: adjust-color($accent, $alpha: -.9);
-    // color: #EB5757;
-    // background: rgba(135,131,120,0.15);
     border-radius: 4px;
     padding: 0 8px;
   }

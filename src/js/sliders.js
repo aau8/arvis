@@ -18,13 +18,12 @@ const mainSlider = new Swiper('.main-slider', {
   modules: [Pagination, Thumbs, EffectFade, Autoplay],
 
   allowTouchMove: false,
-  // autoHeight: true,
   effect: 'fade',
   fadeEffect: {
     crossFade: true
   },
-  autoplay: { // автопрокрутка
-    delay: 10000, // задержка
+  autoplay: {
+    delay: 10000,
   },
 
   pagination: {
@@ -173,16 +172,6 @@ const caseContentSlider = new Swiper('.sc-content__slider', {
   fadeEffect: {
     crossFade: true
   },
-  
-  // navigation: {
-  //   prevEl: '.s-case__arrow_prev',
-  //   nextEl: '.s-case__arrow_next',
-  // },
-
-  // pagination: {
-  //   el: '.sci-pagination',
-  //   clickable: true,
-  // }
 })
 
 const caseImagesSlider = new Swiper('.sc-images__slider', {
@@ -225,7 +214,6 @@ const videoSlider = new Swiper('.s-video__slider', {
       spaceBetween: 24,
     },
     768: {
-      // allowTouchMove: false,
       slidesPerView: 2,
       spaceBetween: 24,
     },
@@ -250,8 +238,6 @@ const videoSlider = new Swiper('.s-video__slider', {
 
 const assistSlider = new Swiper('.s-assist__slider', {
   modules: [Navigation],
-  // allowTouchMove: true,
-  // spaceBetween: 27,
 
   breakpoints: {
     1200: {
@@ -263,7 +249,6 @@ const assistSlider = new Swiper('.s-assist__slider', {
       spaceBetween: 16,
     },
     768: {
-      // allowTouchMove: false,
       slidesPerView: 2,
       spaceBetween: 24,
     },
@@ -299,7 +284,6 @@ const caseSlider = new Swiper('.case__slider', {
       spaceBetween: 16,
     },
     768: {
-      // allowTouchMove: false,
       slidesPerView: 2,
       spaceBetween: 24,
     },
@@ -327,7 +311,6 @@ const caseSlider = new Swiper('.case__slider', {
 
 const calendarSlider = new Swiper('.calendar-year', {
   modules: [Navigation, Pagination],
-  // loop: true,
 
   allowTouchMove: false,
 

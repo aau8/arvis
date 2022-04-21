@@ -1,7 +1,4 @@
 .s-assist__body {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // gap: 24px;
 
     & .swiper-container {
         padding-bottom: 16px;
@@ -144,7 +141,6 @@
     font-size: 13px;
     line-height: lhperc(13, 22);
     color: $light;
-    // background: $light;
     padding: 24px 36px;
     margin-top: 28px;
 }

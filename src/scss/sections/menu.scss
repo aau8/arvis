@@ -1,6 +1,4 @@
-// $adapt-hidden-menu: mwContainer($container);
 $adapt-hidden-menu: $laptop;
-// $adapt-hidden-menu: 1150px;
 
 .menu {
     margin: 0 auto 0 122px;
@@ -106,7 +104,6 @@ $adapt-hidden-menu: $laptop;
     @media (max-width: $adapt-hidden-menu) {
         display: flex;
         flex-direction: column;
-        // align-items: center;
         padding: 0 24px;
         margin: 24px 0;
     }
@@ -184,13 +181,6 @@ $adapt-hidden-menu: $laptop;
             }
         }
 
-        &:not(:last-child) {
-
-            // & a {
-            //     border-bottom: 1px solid $outline-dark;
-            // }
-        }
-
         & a {
             color: $text-light;
             padding: 4px 0;
@@ -198,13 +188,8 @@ $adapt-hidden-menu: $laptop;
             @media (max-width: $adapt-hidden-menu) {
                 width: 100%;
                 color: $text-dark;
-                // text-align: center;
                 padding: 8px 0;
             }
-
-            // @media (max-width: $mobile-l) {
-            //     padding: 8px 16px;
-            // }
         }
     }
 }

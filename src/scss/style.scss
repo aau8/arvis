@@ -5,11 +5,6 @@
 @import '_grid'; // Сетка
 
 
-// Общие стили для страниц
-// @include selection {} // Стиль выделения элементов на странице
-// @include scrollbar(); // Стиль скроллбара
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -136,7 +131,6 @@ body {
 @import './components/sidebar';
 @import './components/filter';
 @import './components/calendar';
-// @import './components/buttons';
 
 // Карточки
 @import './components/cards/n-card';
@@ -179,9 +173,6 @@ body {
 @import './sections/s-organs';
 @import './sections/s-assist';
 @import './sections/s-effect';
-
-// Страница "Партнеры"
-@import './sections/s-partners';
 
 // Страница "Проекты"
 @import './sections/s-projects';

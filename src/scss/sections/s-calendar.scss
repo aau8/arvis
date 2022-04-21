@@ -34,7 +34,6 @@
     box-shadow: none;
 
     & .event-card__content {
-        // min-height: 116px;
         border: 1px solid $outline-dark;
         padding: 12px 30px;
 
@@ -45,10 +44,7 @@
     }
     
     & .event-card__content-text {
-        // display: inline;
-        // -webkit-box-orient: initial;
         -webkit-line-clamp: 3;
-        // overflow: initial;
 
         @media (max-width: $mobile-l) {
             line-height: 1.4;
@@ -68,7 +64,6 @@
 
     & .event-card__thumb {
         flex: 1 1 0;
-        // max-height: none;
         max-height: 350px;
 
         @media (max-width: 1170px) {
@@ -77,10 +72,7 @@
         }
 
         @media (max-width: $mobile-l) {
-            // flex: 1 1 0;
             height: 240px; 
-            // max-height: none;
-            // max-height: 350px;
         }
     }
 

@@ -1,11 +1,3 @@
-// $btn-default: #328AE6;
-// $btn-hover: #4BADF1;
-// $btn-active: #0C7FF8;
-// $btn-focus: #0C7FF8;
-// $btn-light: rgba(163, 170, 192, 0.1);
-// $link-hover: #328AE6;
-// $link-active: findLightColor($link-hover, 65%);
-
 // Основной шаблон кнопки
 .btn {
     width: 100%;
@@ -200,13 +192,6 @@
     line-height: 1.2;
     text-align: right;
     margin: 10px 0;
-
-    & span {
-
-        // &:last-child {
-        //     margin-left: 8px;
-        // }
-    }
 
     &:hover {
         

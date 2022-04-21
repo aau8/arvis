@@ -39,6 +39,7 @@ export default {
       template: `./src/${page}`, // Где находится файл
       filename: `./${page}`, // Название файла
       inject: page === 'index.html' ? false : 'body', // Все скрипты помещаются внизу body, кроме страницы index.html
+      minify: false
       // minify: isDev ? false : {
       //   caseSensitive: false,
       //   removeComments: true,
@@ -65,27 +66,22 @@ export default {
   module: {
       rules: [
         // HTML
-        {
-          test: /\.html$/i,
-          use: 'html-loader'
-        },
+        // {
+        //   test: /\.html$/i,
+        //   use: 'html-loader'
+        // },
         // CSS
         {
           test: /\.(s[ac]ss|css)$/i,
           use: [
             MiniCssExtractPlugin.loader,
-            // 'style-loader',
             'css-loader',
-            // 'postcss-loader',
             {
               loader: 'postcss-loader',
               options: {
                 postcssOptions: {
                   plugins: [
                     'autoprefixer'
-                    // autoprefixer({
-                    //   overrideBrowserslist:['ie >= 8', 'last 4 version']
-                    // })
                   ],
                 },
                 sourceMap: true

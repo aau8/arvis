@@ -184,19 +184,8 @@ if (document.getElementById('calendar-events')) {
         },
         eventDisplay: 'background',
         events: arvisEvents,
-        // eventChange: e => {
-        //     console.log(e)
-        // },
-        // eventChange: e => {
-        //     console.log(e)
-        // }
     });
     calendar.render();
-
-    // calendar.on('eventAdd', e => {
-    //     // console.log(e, 'ok')
-    //     // changeDaysColorText()
-    // })
 
     changeDaysColorText()
     calendar.gotoDate(new Date())

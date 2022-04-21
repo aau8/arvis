@@ -7,10 +7,6 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
 
-    // @media (max-width: mwContainer($container)) {
-    //     grid-template-columns: repeat(4, 1fr);
-    // }
-
     @media (max-width: $laptop) {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -21,10 +17,6 @@
 
     @media (max-width: 900px) {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (max-width: 850px) {
-        // grid-template-columns: repeat(3, 1fr);
     }
 
     @media (max-width: $tablet) {

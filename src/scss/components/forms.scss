@@ -12,20 +12,13 @@
     height: 40px;
     font-size: 14px;
     background: none;
-    // border: 1px solid $input-placeholder;
     border-bottom: 1px solid $outline-input;
     padding: 0 16px 0 4px;
     transition: border-color $tr;
 
-    &:focus {
-        // border: 1px solid $input-focus;
-
-    }
-
     & .textfield__clear._show{
         opacity: 1;
         visibility: visible;
-        // pointer-events: all;
     }
 
     /* Скрытие скролла */
@@ -83,7 +76,6 @@
     transition: $tr;
     
     &._change-label {
-        // display: none;
         top: 0;
         bottom: auto;
         transform: translate(0, -70%) scale(.9);

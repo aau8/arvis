@@ -38,11 +38,8 @@
 
 .modal__window {
     position: relative;
-    // max-width: 512px;
     width: 100%;
     background: #fff;
-    // border-radius: $radius-card-s;
-    // padding: 32px;
     box-shadow: 0px 6px 32px rgba(54, 52, 52, 0.1);
 }
 
@@ -54,9 +51,6 @@
 
 .modal-close {
     position: relative;
-    // position: absolute;
-    // top: 16px;
-    // right: 16px;
     width: 22px;
     height: 22px;
 

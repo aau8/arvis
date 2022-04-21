@@ -71,10 +71,6 @@
     }
 }
 
-.se__list {
-    // display: none;   
-}
-
 .se__item {
     position: absolute;
     font-size: 13px;
@@ -155,7 +151,6 @@
         transform: translate(-100%, 0);
 
         @media (max-width: 1150px) {
-            // top: 50%;
             left: 30px;
         }
 
