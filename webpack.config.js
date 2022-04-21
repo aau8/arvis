@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import autoprefixer from 'autoprefixer'
 import fs from 'fs'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -73,10 +74,59 @@ export default {
           test: /\.(s[ac]ss|css)$/i,
           use: [
             MiniCssExtractPlugin.loader,
-            'css-loader', 
-            'sass-loader'
+            // 'style-loader',
+            'css-loader',
+            // 'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                      autoprefixer({
+                        overrideBrowserslist:['ie >= 8', 'last 4 version']
+                      })
+                  ],
+                },
+                sourceMap: true
+              }
+            },
+            'sass-loader',
           ]
         },
+        // {
+        //   test: /\.scss$/,
+        //   use: [
+        //       {
+        //           loader: 'style-loader'
+        //       },
+        //       {
+        //           loader: 'css-loader',
+        //           options: {
+        //               sourceMap: true
+        //           }
+        //       },
+        //       {
+        //           loader: 'postcss-loader',
+        //           options: {
+        //               plugins: [
+        //                   autoprefixer({
+        //                     overrideBrowserslist:['ie >= 8', 'last 4 version']
+        //                   })
+        //               ],
+        //               sourceMap: true
+        //           }
+        //       },
+        //       {
+        //           loader: 'sass-loader',
+        //           options: {
+        //               includePaths: [
+        //                   helpers.root('src', 'styles', 'global'),
+        //               ],
+        //               sourceMap: true
+        //           }
+        //       }
+        //   ],
+        // },
         // Изображения
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
