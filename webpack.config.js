@@ -82,9 +82,10 @@ export default {
               options: {
                 postcssOptions: {
                   plugins: [
-                      autoprefixer({
-                        overrideBrowserslist:['ie >= 8', 'last 4 version']
-                      })
+                    'autoprefixer'
+                    // autoprefixer({
+                    //   overrideBrowserslist:['ie >= 8', 'last 4 version']
+                    // })
                   ],
                 },
                 sourceMap: true
@@ -93,40 +94,6 @@ export default {
             'sass-loader',
           ]
         },
-        // {
-        //   test: /\.scss$/,
-        //   use: [
-        //       {
-        //           loader: 'style-loader'
-        //       },
-        //       {
-        //           loader: 'css-loader',
-        //           options: {
-        //               sourceMap: true
-        //           }
-        //       },
-        //       {
-        //           loader: 'postcss-loader',
-        //           options: {
-        //               plugins: [
-        //                   autoprefixer({
-        //                     overrideBrowserslist:['ie >= 8', 'last 4 version']
-        //                   })
-        //               ],
-        //               sourceMap: true
-        //           }
-        //       },
-        //       {
-        //           loader: 'sass-loader',
-        //           options: {
-        //               includePaths: [
-        //                   helpers.root('src', 'styles', 'global'),
-        //               ],
-        //               sourceMap: true
-        //           }
-        //       }
-        //   ],
-        // },
         // Изображения
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,

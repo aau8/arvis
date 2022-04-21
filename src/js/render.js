@@ -184,16 +184,19 @@ if (document.getElementById('calendar-events')) {
         },
         eventDisplay: 'background',
         events: arvisEvents,
-        eventChange: e => {
-            console.log(e)
-        },
+        // eventChange: e => {
+        //     console.log(e)
+        // },
+        // eventChange: e => {
+        //     console.log(e)
+        // }
     });
     calendar.render();
 
-    calendar.on('eventAdd', e => {
-        changeDaysColorText()
-        console.log(e)
-    })
+    // calendar.on('eventAdd', e => {
+    //     // console.log(e, 'ok')
+    //     // changeDaysColorText()
+    // })
 
     changeDaysColorText()
     calendar.gotoDate(new Date())
@@ -218,6 +221,7 @@ if (document.getElementById('calendar-events')) {
     })
 }
 
+// Изменение цвета текста на белый у событий
 function changeDaysColorText() {
     const gridDays = document.querySelectorAll('.fc-daygrid-day:not(.fc-day-other)')
 
@@ -229,6 +233,21 @@ function changeDaysColorText() {
             const dayNumber = parent.querySelector('.fc-daygrid-day-top')
     
             dayNumber.classList.add('event-day-number')
+        }
+    }
+
+    addLinkToEvents()
+}
+
+function addLinkToEvents() {
+    const eventsTitle = document.querySelectorAll('div.fc-event-title')
+
+    for (let i = 0; i < eventsTitle.length; i++) {
+        const title = eventsTitle[i]
+        const parent = title.parentElement
+
+        if (!parent.querySelector('a.fc-event-title')) {
+            parent.insertAdjacentHTML('beforeend', `<a href="${title.innerText}" class="fc-event-title"></a>`)
         }
     }
 }

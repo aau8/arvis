@@ -37,5 +37,17 @@
     "bulma": "^0.9.3",
     "swiper": "^8.0.7"
   },
-  "type": "module"
+  "type": "module",
+  "browserslist": {
+    "production": [
+      "ie >= 8", 
+      "last 4 version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  }
 }

@@ -221,6 +221,10 @@
     }
 }
 
+.fc .fc-daygrid-day-top {
+    pointer-events: none;
+}
+
 .fc .fc-view-harness {
     // width: 92%;
     // height: 200px !important    ;
@@ -259,6 +263,7 @@
 }
 
 .fc .fc-bg-event {
+    z-index: 2 !important;
     opacity: 1 !important;
     margin: 2px;
 }
@@ -289,28 +294,62 @@
     // margin: 2px;
 }
 
+.fc .fc-bg-event .fc-event-title {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fc .fc-bg-event div.fc-event-title {
+    display: none;
+}
+
 .organized-by-arvis {
     z-index: -1 !important;
     background: #5272FF !important;
     opacity: 1 !important;
+    transition: $tr;
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     z-index: 1;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     // filter: brightness(0.4);
-    //     backdrop-filter: brightness(60%);
-    // }
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            background: brig-color(#5272FF, 10%) !important;
+        }
+    }
+
+    &:active {
+        @media (min-width: $min-hover) {
+            background: brig-color(#5272FF, active) !important;
+        }
+        
+        background: brig-color(#5272FF, 10%) !important;
+    }
 }
 
 .arvis-will-take-part {
     z-index: -1 !important;
     background: #7E4F84 !important;
     opacity: 1 !important;
+    transition: $tr;
+    cursor: pointer;
+
+    &:hover {
+        
+        @media (min-width: $min-hover) {
+            background: brig-color(#7E4F84, 10%) !important;
+        }
+    }
+
+    &:active {
+        @media (min-width: $min-hover) {
+            background: brig-color(#7E4F84, active) !important;
+        }
+        
+        background: brig-color(#7E4F84, 10%) !important;
+    }
 }
 
 .event-day-number {
@@ -320,9 +359,10 @@
 
 .fc .fc-daygrid-day-number {
     transition: 0s;
+    // pointer-events: none;
 }
 
-.hello .fc-event-title {
-    color: #fff;
-}
+// .hello .fc-event-title {
+//     color: #fff;
+// }
 // Конец стилей элементов FullCalendar ======================
