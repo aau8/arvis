@@ -24,6 +24,10 @@
         margin: 0 16px;
     }
 
+    @media (max-width: 1150px) {
+        margin: 0 12px;
+    }
+
     &_menu {
         display: none;
 

@@ -9,6 +9,19 @@
     font-weight: 500;
     line-height: lhperc(12, 24);
     text-transform: uppercase;
+
+    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (10 - 8) + 8px);
+    }
+
+    @media (min-width: 900px) and (max-width: $laptop) {
+        font-size: 10px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: calc( (100vw - 320px)/(425 - 320) * (11 - 8) + 8px);
+        font-weight: 600;
+    }
 }
 
 .sc-man {
@@ -56,6 +69,10 @@
     flex-direction: column;
     padding: 28px 18px 22px;
 
+    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+        padding: 28px calc( (100vw - 1024px)/(1448 - 1024) * (16 - 12) + 12px);
+    }
+
     @media (max-width: 500px) {
         padding: 24px 16px 16px;
     }
@@ -69,12 +86,29 @@
     font-size: 16px;
     font-weight: 500;
     line-height: lhperc(16, 22);
+
+    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (14 - 12) + 12px);
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
 }
 
 .sc-man__name {
     font-size: 12px;
     line-height: lhperc(12, 22);
     margin-top: 4px;
+
+    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (12 - 10) + 10px);
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 10px;
+        line-height: 1.2;
+    }
 }
 
 .sc__company {
@@ -113,6 +147,19 @@
     line-height: lhperc(12, 20);
     text-transform: uppercase;
     margin: 20px 18px 0;
+
+    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (10 - 8) + 8px);
+    }
+
+    @media (min-width: 900px) and (max-width: $laptop) {
+        font-size: 10px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: calc( (100vw - 320px)/(425 - 320) * (11 - 8) + 8px);
+        margin: 20px 0 0;
+    }
 
     @media (max-width: $mobile-s) {
         margin: 16px 12px 0;

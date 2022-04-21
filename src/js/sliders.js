@@ -50,6 +50,46 @@ const mainSlider = new Swiper('.main-slider', {
   }
 });
 
+// Слайдер с членами Арвис
+const membersArvisSlider = new Swiper('.main__member-list', {
+  modules: [Autoplay],
+
+  allowTouchMove: false,
+  speed: 8000,
+  autoplay: {
+    enable: false,
+    delay: 0,
+  },
+
+  breakpoints: {
+    850: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    }
+  },
+  on: {
+    init: slider => {
+      if (!slider.isEnd) {
+        slider.loopCreate()
+        slider.autoplay.start(true)
+        slider.update()
+      }
+    }
+  }
+});
+
 const newsSlider = new Swiper('.s-news__slider', {
   modules: [Navigation],
   allowTouchMove: false,
