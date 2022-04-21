@@ -63,7 +63,7 @@
 .sce-main-card {
 
     & .event-card__thumb {
-        flex: 1 1 0;
+        flex: 1 0 auto;
         max-height: 350px;
 
         @media (max-width: 1170px) {

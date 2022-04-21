@@ -42,7 +42,7 @@
 }
 
 .case-card__content {
-    flex: 1 1 0;
+    flex: 1 0 auto;
     padding-right: 50px;
     margin: auto 0;
 
@@ -131,7 +131,7 @@
 
 .case-card__thumb {
     position: relative;
-    flex: 1 1 0;
+    flex: 1 0 auto;
     max-width: 322px;
     width: 100%;
 
