@@ -1,8 +1,8 @@
-@import '_mixins'; // Миксины
-@import '_fonts'; // Шрифты
-@import '_vars'; // Переменные
-@import '_reset'; // Сброс css
-@import '_grid'; // Сетка
+@import 'mixins'; // Миксины
+@import 'fonts'; // Шрифты
+@import 'vars'; // Переменные
+@import 'reset'; // Сброс css
+@import 'grid'; // Сетка
 
 
 html {
@@ -47,9 +47,9 @@ body {
 }
 
 .info {
-    max-width: 1044px;
+    max-width: 1064px;
     width: 75%;
-    margin-left: 68px;
+    margin-left: 48px;
     margin-bottom: 100px;
 
     @media (max-width: mwContainer($container)) {
@@ -114,7 +114,7 @@ body {
 }
 
 // Анимация
-@import './_animation';
+@import './animation';
 
 // Елементы
 @import './elements/button';
@@ -151,18 +151,18 @@ body {
 @import './components/modals/modal-structure'; 
  
 // Текстовые компоненты
-@import './components/text/_text';
-@import './components/text/_titles';
+@import './components/text/text';
+@import './components/text/titles';
 
 // Секции
-@import './sections/_header';
+@import './sections/header';
 @import './sections/menu';
-@import './sections/_main';
+@import './sections/main';
 @import './sections/s-news';
 @import './sections/s-event';
 @import './sections/s-case';
 @import './sections/s-video';
-@import './sections/_footer';
+@import './sections/footer';
 
 // Страница структуры
 @import './sections/s-struct';
@@ -188,9 +188,6 @@ body {
 
 // Страница с презентационными материалами
 @import './sections/presentations';
-
-// Страница с публикациями
-@import './sections/publications';
 
 // Страница с кейсами
 @import './sections/cases';

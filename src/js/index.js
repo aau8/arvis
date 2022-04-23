@@ -1,5 +1,4 @@
 import './render.js' 
-// import './animation.js'
 import { find, findAll, removeAll, bodyLock, getSiblings } from "./util/functions.js"
 import './sliders.js'
 import '../scss/style.scss'

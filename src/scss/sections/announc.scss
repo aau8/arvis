@@ -1,7 +1,6 @@
 .announc__body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(400px, 1fr);
     gap: 28px;
 
     @media (max-width: mwContainer($container)) {
@@ -14,10 +13,6 @@
 
     @media (max-width: 650px) {
         grid-template-columns: 1fr;
-    }
-
-    @media (max-width: 500px) {
-        grid-auto-rows: minmax(350px, 1fr);
     }
 }
 

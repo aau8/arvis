@@ -3,7 +3,7 @@ $adapt-hidden-menu: $laptop;
 .menu {
     margin: 0 auto 0 122px;
 
-    @media (max-width: 1440px) {
+    @media (max-width: mwContainer($container)) {
         margin-left: 60px;
     }
 
@@ -148,10 +148,10 @@ $adapt-hidden-menu: $laptop;
         &:not(:last-child) {
             margin-right: 38px;
 
-            @media (max-width: 1440px) {
+            @media (max-width: mwContainer($container)) {
                 margin-right: 24px;
             }
-
+            
             @media (max-width: 1150px) {
                 margin-right: 20px;
             }
@@ -159,6 +159,7 @@ $adapt-hidden-menu: $laptop;
             @media (max-width: $adapt-hidden-menu) {
                 margin: 0 0 6px 0;
             }
+
         }
 
         &._current-page {

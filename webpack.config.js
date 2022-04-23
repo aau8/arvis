@@ -40,22 +40,6 @@ export default {
       filename: `./${page}`, // Название файла
       inject: page === 'index.html' ? false : 'body', // Все скрипты помещаются внизу body, кроме страницы index.html
       minify: false
-      // minify: isDev ? false : {
-      //   caseSensitive: false,
-      //   removeComments: true,
-      //   collapseWhitespace: false,
-      //   removeRedundantAttributes: true,
-      //   useShortDoctype: true,
-      //   removeEmptyAttributes: true,
-      //   removeStyleLinkTypeAttributes: true,
-      //   removeScriptTypeAttributes: true,
-      //   keepClosingSlash: false,
-      //   minifyJS: { compress: { conditionals: false }},
-      //   minifyCSS: true,
-      //   minifyURLs: true,
-      //   sortAttributes: true,
-      //   sortClassName: true,
-      // }
     })),
     // Очищаем папку dist
     new CleanWebpackPlugin(),

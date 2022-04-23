@@ -1,7 +1,5 @@
 import { removeAll } from './util/functions.js'
 
-// import { getSiblings } from './util/functions.js'
-
 // Одинаковый размер карточек на странице проектов
 if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
     const projectBody = document.querySelector('.s-projects__body')
@@ -71,7 +69,6 @@ if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
 }
 
 // Увеличение элементов иллюстрации при наведении на карточке в разделе "Какие организации входят в АРВИС"
-
 const cardElems = document.querySelectorAll('.so-card')
 
 for (let i = 0; i < cardElems.length; i++) {
@@ -241,7 +238,6 @@ function addLinkToEvents() {
     }
 }
 
-// setYearAndMonth(calendar)
 function setYearAndMonth(calendar) {
     const year = document.querySelector('.calendar-year input:checked').value
     const month = document.querySelector('.calendar__mounth .select-dropdown__item._selected').dataset.monthId

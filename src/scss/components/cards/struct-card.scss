@@ -5,13 +5,14 @@
 }
 
 .struct-card__post {
+    min-height: 30px;
     font-size: 12px;
     font-weight: 500;
-    line-height: lhperc(12, 24);
+    line-height: 1.4;
     text-transform: uppercase;
 
-    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
-        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (10 - 8) + 8px);
+    @media (min-width: $laptop) and (max-width: 1560px) {
+        font-size: calc( (100vw - 1024px)/(1448 - 1024) * (12 - 10) + 10px);
     }
 
     @media (min-width: 900px) and (max-width: $laptop) {
@@ -69,7 +70,7 @@
     flex-direction: column;
     padding: 28px 18px 22px;
 
-    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+    @media (min-width: $laptop) and (max-width: 1560px) {
         padding: 28px calc( (100vw - 1024px)/(1448 - 1024) * (16 - 12) + 12px);
     }
 
@@ -87,7 +88,7 @@
     font-weight: 500;
     line-height: lhperc(16, 22);
 
-    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+    @media (min-width: $laptop) and (max-width: 1560px) {
         font-size: calc( (100vw - 1024px)/(1448 - 1024) * (14 - 12) + 12px);
     }
 
@@ -101,7 +102,7 @@
     line-height: lhperc(12, 22);
     margin-top: 4px;
 
-    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+    @media (min-width: $laptop) and (max-width: 1560px) {
         font-size: calc( (100vw - 1024px)/(1448 - 1024) * (12 - 10) + 10px);
     }
 
@@ -148,7 +149,7 @@
     text-transform: uppercase;
     margin: 20px 18px 0;
 
-    @media (min-width: $laptop) and (max-width: mwContainer($container)) {
+    @media (min-width: $laptop) and (max-width: 1560px) {
         font-size: calc( (100vw - 1024px)/(1448 - 1024) * (10 - 8) + 8px);
     }
 

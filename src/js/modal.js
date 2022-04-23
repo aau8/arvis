@@ -24,8 +24,6 @@ class Modal {
 
             if (target.getAttribute('[data-open-modal]') || target.closest('[data-open-modal]')) {
                 this.openedButton = target
-
-                console.log(target, 'ok')
                 this.open(target.dataset.openModal)
             }
         })

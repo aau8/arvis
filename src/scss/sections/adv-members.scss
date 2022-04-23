@@ -12,6 +12,15 @@
 .adv-members__ill {
     position: relative;
     width: 100%;
+    margin-top: 16px;
+
+    @media (max-width: 650px) {
+        margin-top: 48px;
+    }
+
+    @media (max-width: 500px) {
+        margin-top: 0;
+    }
 
     &::before {
         content: '';
@@ -31,10 +40,6 @@
             padding: 0;
         }
     }
-}
-
-.adv-members__list {
-
 }
 
 .adv-members__item {
