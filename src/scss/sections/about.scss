@@ -34,11 +34,12 @@
     min-width: 200px;
     max-width: 288px;
     width: 25%;
-    height: 100%;
+    // height: 100%;
     margin-top: -380px;
 
     & .sidebar {
         width: 100%;
+        height: auto;
 
         &::after {
             content: '';
@@ -56,6 +57,11 @@
                 height: 70px;
             }
         }
+    }
+    
+    & .sidebar__wrap {
+        position: relative;
+        background: #fff;
     }
 
     @media (max-width: $tablet) {

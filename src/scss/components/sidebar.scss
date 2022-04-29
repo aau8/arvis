@@ -1,12 +1,13 @@
 .sidebar {
-    position: relative;
+    // position: relative;
+    position: sticky;
+    top: 16px;
     min-width: 200px;
     max-width: 288px;
     width: 25%;
     height: 100%;
     background: $light;
     box-shadow: $shadow-card;
-    padding: 40px 0;
     margin-bottom: 24px;
 
     @media (max-width: $laptop) {
@@ -17,10 +18,20 @@
         position: initial;
         max-width: none;
         width: 100%;
-        padding: 24px 0;
         margin-bottom: 0;
     }
 
+}
+
+.sidebar__wrap {
+    position: relative;
+    background: #fff;
+    padding: 40px 0;
+    
+    @media (max-width: 900px) {
+        padding: 24px 0;
+    }
+    
     @media (max-width: $mobile-l) {
         padding: 16px 0;
     }
