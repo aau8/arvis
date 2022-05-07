@@ -50,10 +50,13 @@ export default {
   module: {
       rules: [
         // HTML
-        // {
-        //   test: /\.html$/i,
-        //   use: 'html-loader'
-        // },
+        {
+          test: /\.html$/i,
+          loader: 'html-loader',
+          options: {
+              minimize: false,
+          }
+        },
         // CSS
         {
           test: /\.(s[ac]ss|css)$/i,
