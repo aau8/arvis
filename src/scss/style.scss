@@ -18,7 +18,7 @@ body {
     font-style: normal;
     line-height: 1.5;
     overflow-x: hidden;
-    
+
     &._lock {
         overflow: hidden;
     }
@@ -151,8 +151,8 @@ body {
 
 // Модальные окна
 @import './components/modals/modal';
-@import './components/modals/modal-structure'; 
- 
+@import './components/modals/modal-structure';
+
 // Текстовые компоненты
 @import './components/text/text';
 @import './components/text/titles';
@@ -216,3 +216,6 @@ body {
 // События
 @import './sections/s-calendar';
 @import './sections/announc';
+
+// Новые страницы "Экспертный комитет", "Комиссия по вторичному сырью", "Консультации экспертов АРВИС"
+@import './advanced-personal';

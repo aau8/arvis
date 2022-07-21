@@ -1,37 +1,37 @@
 import { removeAll } from './util/functions.js'
 
 // Одинаковый размер карточек на странице проектов
-if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
-    const projectBody = document.querySelector('.s-projects__body')
-    const columnElems = projectBody.querySelectorAll('.s-projects__column')
+if (document.querySelector('.dinamic-card-container') && window.innerWidth >= 1150) {
+    const projectBody = document.querySelector('.dinamic-card-container')
+    const columnElems = projectBody.querySelectorAll('.dinamic-card-column')
     let titleArr = []
     let columnArr = []
-    
+
     for (let i = 0; i < columnElems.length; i++) {
         const column = columnElems[i];
-        const cardElems = column.querySelectorAll('.spr-card')
-        const title = column.querySelector('.s-projects__column-title')
+        const cardElems = column.querySelectorAll('.dinamic-card')
+        const title = column.querySelector('.dinamic-card-title')
         let cardArr = []
 
         titleArr.push(title.clientHeight)
-    
-        
+
+
         for (let i = 0; i < cardElems.length; i++) {
                 const card = cardElems[i];
-            
+
                 cardArr.push(card.clientHeight)
         }
 
         columnArr.push(cardArr)
     }
-    
+
     // Установка размера заголовкам
     const maxValueHeightTitle = Math.max(...titleArr)
-    const titleElems = projectBody.querySelectorAll('.s-projects__column-title')
-    
+    const titleElems = projectBody.querySelectorAll('.dinamic-card-title')
+
     for (let i = 0; i < titleElems.length; i++) {
         const title = titleElems[i];
-        
+
         title.style.height = maxValueHeightTitle + 'px'
     }
 
@@ -41,10 +41,10 @@ if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
 
     for (let i = 0; i < columnArrLength[columnWithMoreCards]; i++) {
         let cardArr = []
-        
+
         for (let a = 0; a < columnElems.length; a++) {
             const column = columnElems[a];
-            const card = column.querySelectorAll('.spr-card')[i]
+            const card = column.querySelectorAll('.dinamic-card')[i]
 
             if (card != undefined) {
 
@@ -59,7 +59,7 @@ if (document.querySelector('.s-projects__body') && window.innerWidth >= 1150) {
 
         for (let a = 0; a < columnElems.length; a++) {
             const column = columnElems[a];
-            const card = column.querySelectorAll('.spr-card')[i]
+            const card = column.querySelectorAll('.dinamic-card')[i]
 
             if (card != undefined) {
                 card.style.height = maxValueHeightCard + 'px'
@@ -75,11 +75,11 @@ for (let i = 0; i < cardElems.length; i++) {
     const card = cardElems[i];
     const cardData = card.dataset.part
     const part = document.getElementById(cardData)
-    
+
     card.addEventListener('mouseenter', e => {
         part.classList.add('_active')
     })
-    
+
     card.addEventListener('mouseleave', e => {
         part.classList.remove('_active')
     })
@@ -106,7 +106,7 @@ function select() {
 
         // Если пользователь кликнул вне зоны селекта
         if (!target.classList.contains('select') && !target.closest('.select._open')) {
-            
+
             if (document.querySelector('.select._open')) {
                 document.querySelector('.select._open').classList.remove('_open')
             }
@@ -201,7 +201,7 @@ if (document.getElementById('calendar-events')) {
     let observer = new MutationObserver(e => {
         setYearAndMonth(calendar)
     })
-    observer.observe(monthContainer, { 
+    observer.observe(monthContainer, {
         childList: true,
         subtree: true,
     })
@@ -213,11 +213,11 @@ function changeDaysColorText() {
 
     for (let i = 0; i < gridDays.length; i++) {
         const gridDay = gridDays[i].querySelector('.organized-by-arvis, .arvis-will-take-part');
-                
+
         if (gridDay) {
             const parent = gridDay.closest('.fc-daygrid-day')
             const dayNumber = parent.querySelector('.fc-daygrid-day-top')
-    
+
             dayNumber.classList.add('event-day-number')
         }
     }

@@ -1,4 +1,4 @@
-import './render.js' 
+import './render.js'
 import { find, findAll, removeAll, bodyLock, getSiblings } from "./util/functions.js"
 import './sliders.js'
 import '../scss/style.scss'
@@ -6,6 +6,8 @@ import './forms.js'
 import './ajax/report.js'
 
 import '../mail.php'
+
+import './advanced-personal.js'
 
 
 // Мобильное меню
@@ -34,15 +36,15 @@ function menu() {
 // Функции для модальных окон
 modal()
 function modal() {
-    
+
     // Открытие модальных окон при клике по кнопке
     openModalWhenClickingOnBtn()
     function openModalWhenClickingOnBtn() {
         const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
-    
+
         for (let i = 0; i < btnsOpenModal.length; i++) {
             const btn = btnsOpenModal[i];
-    
+
             btn.addEventListener('click', (e) => {
                 const dataBtn = btn.dataset.modalOpen;
                 const modal = document.querySelector(`#${dataBtn}`)
@@ -59,7 +61,7 @@ function modal() {
         if (window.location.hash) {
             const hash = window.location.hash.substring(1)
             const modal = document.querySelector(`.modal#${hash}`)
-    
+
             if (modal) openModal(modal)
         }
     }
@@ -94,7 +96,7 @@ function modal() {
         for (let i = 0; i < modalElems.length; i++) {
             const modal = modalElems[i];
             const closeThisModal = modal.querySelector('.modal-close')
-    
+
             closeThisModal.addEventListener('click', () => {
                 closeModal(modal)
             })
@@ -107,7 +109,7 @@ function modal() {
         const modalElems = document.querySelectorAll('.modal')
         for (let i = 0; i < modalElems.length; i++) {
             const modal = modalElems[i];
-    
+
             document.addEventListener('keydown', e => {
                 if (e.key === 'Escape') closeModal(modal)
             })
