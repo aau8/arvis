@@ -51,7 +51,7 @@
             height: 100%;
             background: #cecece;
         }
-        
+
         td:nth-child(2) {
             width: 100%;
             white-space: nowrap;
@@ -72,6 +72,18 @@
 <body>
     <div class="container">
         <h1>Ссылки на страницы </h1>
+
+        <h2>Новые страницы</h2>
+        <table>
+            <tr>
+                <td>Экспертный комитет</td>
+                <td>experts.html</td>
+            </tr>
+            <tr>
+                <td>Комиссия по вторичному сырью</td>
+                <td>second-mat.html</td>
+            </tr>
+        </table>
 
         <h2>Общие страницы</h2>
         <table>
@@ -198,7 +210,7 @@
             const valid = document.createElement('td')
             valid.classList.add('validator')
             valid.innerHTML = `<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ftopverstka.github.io%2FFIGROUP%2F${url}"><img src="https://validator.w3.org/images/w3c.png" alt="Validator" title="Validator"></a>`
-            
+
             tr.append(valid)
         }
     </script>
